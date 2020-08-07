@@ -471,3 +471,6 @@ Caused by: java.nio.channels.OverlappingFileLockException
 >>>>>>> develop
 	at org.h2.mvstore.FileStore.open(FileStore.java:163)
 	... 28 more
+2020-08-07 13:40:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'A wonderfully balanced spirit, the brand new Audemus Pink Pepper Gin reveals a blend of pink peppercorn, cardamom, juniper, van... (330)"; SQL statement:
+insert into products (id, category, description, image, location, measurement, name, percent, price, stock, type) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [22001-200]
