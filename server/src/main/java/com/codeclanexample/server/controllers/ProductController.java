@@ -1,6 +1,7 @@
 package com.codeclanexample.server.controllers;
 
 import com.codeclanexample.server.models.Product;
+import com.codeclanexample.server.models.ProductTypes;
 import com.codeclanexample.server.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,6 +31,11 @@ public class ProductController {
     public ResponseEntity<Product> postProduct(@RequestBody Product product){
         productRepository.save(product);
         return new ResponseEntity<>(product, HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/products/find/{category}")
+    public ResponseEntity<Optional<Product>> getProductByCategory(@PathVariable ProductTypes category){
+        return new ResponseEntity(productRepository.findByCategory(category), HttpStatus.OK);
     }
 
 }

@@ -2,6 +2,7 @@ package com.codeclanexample.server.components;
 
 import com.codeclanexample.server.models.Product;
 import com.codeclanexample.server.models.ProductTypes;
+import com.codeclanexample.server.models.User;
 import com.codeclanexample.server.repositories.OrderRepository;
 import com.codeclanexample.server.repositories.ProductRepository;
 import com.codeclanexample.server.repositories.UserRepository;
@@ -22,13 +23,7 @@ public class DataLoader implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-<<<<<<< HEAD
-        Product wine1 = new Product();
-        Product wine2 = new Product();
-        Product wine3 = new Product();
-        Product wine4 = new Product();
-        Product wine5 = new Product();
-=======
+
         User user1 = new User("Kat Kmiotek", "123 New street", 33);
         userRepository.save(user1);
         User user2 = new User("Stuart Meldrum", "456 New street", 28);
@@ -51,7 +46,7 @@ public class DataLoader implements ApplicationRunner {
         Product wine5 = new Product("Chateauneuf du Pape Reserve des Oliviers", 750, 10, 21.20, "This Southern Rhone wine region is famous for the galets roules or 'pudding stones ' covering the ground allowing for heat retention to help enhance ripening of the grapes in the vineyards.",
                 "Spain", 15.00, "red", ProductTypes.WINE, "http://localhost:8080/api/images/cdp_maison_favier.jpg");
         productRepository.save(wine5);
->>>>>>> develop
+
 
         Product beer1 = new Product("Big Drop Pine Trail Pale Ale", 330, 10, 2.50, "This dry-hopped pale ale is deliciously refreshing. The nose has hints of pine and honey. Packed full of flavour from citrus-heavy hops with a twist of fresh lime to create a crisp, zesty beer.",
                 "England", 0.5, "Pale Ale", ProductTypes.BEER, "http://localhost:8080/api/images/pale_ale.jpg" );
@@ -70,15 +65,10 @@ public class DataLoader implements ApplicationRunner {
         productRepository.save(beer5);
 
         Product rum1 = new Product("Flor de Cana 7yr", 700, 10, 25.00,
-                "Another gem from the Flor de Cana stable. The 7yr has hints of almond and vanilla, with a mild spiceyness",
-<<<<<<< HEAD
-                "Nicaraguan", 40.00, "gold", ProductTypes.RUM, "http://localhost:8080/api/images/flor_de_cana7yr.jpg");
-        productRepository.save(rum1);
-=======
-                "Nicaraguan", 40.00, "gold", ProductTypes.RUM, "http://localhost:8080/api/images/flor_de_cana_7yr.jpg");
+                "Another gem from the Flor de Cana stable. The 7yr has hints of almond and vanilla, with a mild spiceyness", "Nicaraguan", 40.00, "gold", ProductTypes.RUM, "http://localhost:8080/api/images/flor_de_cana7yr.jpg");
         productRepository.save(rum1);
 
->>>>>>> develop
+
         Product rum2 = new Product("O'Haras Spiced Rum", 700, 10, 24.50, "Fine Caribbean rum with added spice!",
                 "Carabbean", 40.00, "spiced", ProductTypes.RUM, "http://localhost:8080/api/images/o_haras_spiced_rum.jpg");
         productRepository.save(rum2);
@@ -92,13 +82,11 @@ public class DataLoader implements ApplicationRunner {
         productRepository.save(rum4);
 
         Product rum5 = new Product();
-<<<<<<< HEAD
-//
-        Product gin1 = new Product("Audemus Pink Pepper", 700, 10, 45.00, "A wonderfully balanced spirit, the brand new Audemus Pink Pepper Gin reveals a blend of pink peppercorn, cardamom, juniper, vanilla, tonka and honey. ", "France", 44.00, "Regular", ProductTypes.GIN, "http://localhost:8080/api/images/pink_pep.jpg");
-=======
+
+
 
         Product gin1 = new Product("Audemus Pink Pepper", 700, 10, 45.00, "A wonderfully balanced spirit, the brand new Audemus Pink Pepper Gin reveals a blend of pink peppercorn, cardamom, juniper, vanilla, tonka and honey.", "France", 44.00, "Regular", ProductTypes.GIN, "http://localhost:8080/api/images/pink_pep.jpg");
->>>>>>> develop
+
         productRepository.save(gin1);
 
         Product gin2 = new Product("Four Pillars Bloody Shiraz", 700, 10, 38.90, "This gin has flavours of fresh pine needles, citrus and spice, and a clear peppery, dense raspberry character. Due to a higher ABV than a sloe gin it packs a punch and is ideal in a range of cocktails.", "Australia", 37.8, "Flavoured", ProductTypes.GIN, "http://localhost:8080/api/images/four_pillars_shiraz.jpg" );
