@@ -20,7 +20,7 @@ public class DataLoader implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        Product wine1 = new Product();
+        Product wine1 = new Product()
 
     }
 }
