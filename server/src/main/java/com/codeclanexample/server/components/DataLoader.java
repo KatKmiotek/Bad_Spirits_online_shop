@@ -51,13 +51,21 @@ public class DataLoader implements ApplicationRunner {
         productRepository.save(rum4);
 
         Product rum5 = new Product();
+//
+//        Product gin1 = new Product("Audemus Pink Pepper", 700, 10, 45.00, "A wonderfully balanced spirit, the brand new Audemus Pink Pepper Gin reveals a blend of pink peppercorn, cardamom, juniper, vanilla, tonka and honey. With the final recipe taking months to perfect, Audemus Pink Pepper Gin is a handcrafted mix of 9 botanicals, with each batch taking months to finish at their distillery in France.", "France", 44.00, "Regular", ProductTypes.GIN, "http://localhost:8080/api/images/pink_pep.jpg");
+//        productRepository.save(gin1);
 
-        Product gin1 = new Product();
-        Product gin2 = new Product();
-        Product gin3 = new Product();
-        Product gin4 = new Product();
-        Product gin5 = new Product();
+        Product gin2 = new Product("Four Pillars Bloody Shiraz", 700, 10, 38.90, "This gin has flavours of fresh pine needles, citrus and spice, and a clear peppery, dense raspberry character. Due to a higher ABV than a sloe gin it packs a punch and is ideal in a range of cocktails.", "Australia", 37.8, "Flavoured", ProductTypes.GIN, "http://localhost:8080/api/images/four_pillars_shiraz.jpg" );
+        productRepository.save(gin2);
 
+//        Product gin3 = new Product("G12 Grapefruit & Mandarin", 700, 10, 24.99, "Distilled with fresh mandarin, this gin delivers a complex juniper led, grapefruit citrus flavour. Accentuated by hints of spice from cassia, light floral coriander, finished with sweet mandarin. Best served with a premium tonic, plenty of ice and garnished with a wedge of grapefruit.", "England", 37.5, "Flavoured", ProductTypes.GIN, "http://localhost:8080/api/images/g12_mandarin.png");
+//        productRepository.save(gin3);
+
+        Product gin4 = new Product("The Botanist", 700, 10, 36.00, "The Botanist Islay Dry Gin is made from the guys from the Bruichladdich Distillery on Islay. Packed full of 31 Botanicals, 22 of which are found on Islay.", "Scotland", 46,  "Regular", ProductTypes.GIN, "http://localhost:8080/api/images/botanist.png");
+        productRepository.save(gin4);
+
+        Product gin5 = new Product("Jaffa Cake Gin", 700, 10, 28.00, "Jaffa Cake Gin is a delicious concoction from the ingenious distillers at Atom Labs. Distilled with juniper, fresh orange peel, cocoa powder and real Jaffa cakes, the team produces and blends each batch in Kent, UK.", "England", 42, "Regular", ProductTypes.GIN, "http://localhost:8080/api/images/jaffa-cake-gin.jpg");
+        productRepository.save(gin5);
 
     }
 }
