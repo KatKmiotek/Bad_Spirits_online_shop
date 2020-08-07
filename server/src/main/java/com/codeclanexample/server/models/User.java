@@ -1,15 +1,31 @@
 package com.codeclanexample.server.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name="users")
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name="name")
     private String name;
+
+    @Column(name="address")
     private String address;
+
+    @Column(name="age")
     private int age;
+
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    @JsonIgnoreProperties("user")
     private List<Order> orders;
 
     public User(String name, String address, int age) {
