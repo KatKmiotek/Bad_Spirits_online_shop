@@ -15,7 +15,7 @@ public class ProductController {
 
     @Autowired
     ProductRepository productRepository;
-
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping(value = "/products")
     public ResponseEntity<List<Product>> getAllProducts(){
         return new ResponseEntity<>(productRepository.findAll(), HttpStatus.OK);
