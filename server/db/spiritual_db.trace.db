@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 2020-08-07 11:56:58 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/user/Desktop/ShopProject/group_project/server/db/spiritual_db.mv.db [1.4.200/7]" [50000-200]
+=======
+<<<<<<< HEAD
+2020-08-07 12:12:49 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/craig/Desktop/codeclan_work/final_project/group_project/server/db/spiritual_db.mv.db [1.4.200/7]" [50000-200]
+=======
+2020-08-07 12:51:35 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/kat/Desktop/spirits_shop/server/db/spiritual_db.mv.db [1.4.200/7]" [50000-200]
+>>>>>>> develop
+>>>>>>> develop
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)
 	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
@@ -29,6 +39,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
 	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:725)
 	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:711)
+<<<<<<< HEAD
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
@@ -90,11 +101,34 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.I
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 33 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/user/Desktop/ShopProject/group_project/server/db/spiritual_db.mv.db [1.4.200/7]
+=======
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+<<<<<<< HEAD
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/craig/Desktop/codeclan_work/final_project/group_project/server/db/spiritual_db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/craig/Desktop/codeclan_work/final_project/group_project/server/db/spiritual_db.mv.db [1.4.200/7]
+=======
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/kat/Desktop/spirits_shop/server/db/spiritual_db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/kat/Desktop/spirits_shop/server/db/spiritual_db.mv.db [1.4.200/7]
+>>>>>>> develop
+>>>>>>> develop
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
 	at org.h2.mvstore.FileStore.open(FileStore.java:166)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
 	... 27 more
 Caused by: java.nio.channels.OverlappingFileLockException
+<<<<<<< HEAD
 	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
 	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
 	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1108)
@@ -104,6 +138,18 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	... 28 more
 2020-08-07 12:49:16 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/user/Desktop/ShopProject/group_project/server/db/spiritual_db.mv.db [1.4.200/7]" [50000-200]
+=======
+	at java.base/sun.nio.ch.FileLockTable.checkList(FileLockTable.java:229)
+	at java.base/sun.nio.ch.FileLockTable.add(FileLockTable.java:123)
+<<<<<<< HEAD
+	at java.base/sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1154)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.base/java.nio.channels.FileChannel.tryLock(FileChannel.java:1165)
+	at org.h2.mvstore.FileStore.open(FileStore.java:163)
+	... 28 more
+2020-08-07 12:12:49 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/craig/Desktop/codeclan_work/final_project/group_project/server/db/spiritual_db.mv.db [1.4.200/7]" [50000-200]
+>>>>>>> develop
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)
 	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
@@ -133,6 +179,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
 	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:725)
 	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:711)
+<<<<<<< HEAD
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
@@ -142,11 +189,23 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.I
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 33 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/user/Desktop/ShopProject/group_project/server/db/spiritual_db.mv.db [1.4.200/7]
+=======
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/craig/Desktop/codeclan_work/final_project/group_project/server/db/spiritual_db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/craig/Desktop/codeclan_work/final_project/group_project/server/db/spiritual_db.mv.db [1.4.200/7]
+>>>>>>> develop
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
 	at org.h2.mvstore.FileStore.open(FileStore.java:166)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
 	... 27 more
 Caused by: java.nio.channels.OverlappingFileLockException
+<<<<<<< HEAD
 	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
 	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
 	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1108)
@@ -156,6 +215,26 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	... 28 more
 2020-08-07 12:57:03 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/user/Desktop/ShopProject/group_project/server/db/spiritual_db.mv.db [1.4.200/7]" [50000-200]
+=======
+	at java.base/sun.nio.ch.FileLockTable.checkList(FileLockTable.java:229)
+	at java.base/sun.nio.ch.FileLockTable.add(FileLockTable.java:123)
+	at java.base/sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1154)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.base/java.nio.channels.FileChannel.tryLock(FileChannel.java:1165)
+	at org.h2.mvstore.FileStore.open(FileStore.java:163)
+	... 28 more
+2020-08-07 12:55:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'A wonderfully balanced spirit, the brand new Audemus Pink Pepper Gin reveals a blend of pink peppercorn, cardamom, juniper, van... (446)"; SQL statement:
+insert into products (id, category, description, image, location, measurement, name, percent, price, stock, type) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [22001-200]
+2020-08-07 12:57:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'A wonderfully balanced spirit, the brand new Audemus Pink Pepper Gin reveals a blend of pink peppercorn, cardamom, juniper, van... (330)"; SQL statement:
+insert into products (id, category, description, image, location, measurement, name, percent, price, stock, type) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [22001-200]
+2020-08-07 13:00:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'Distilled with fresh mandarin, this gin delivers a complex juniper led, grapefruit citrus flavour. Accentuated by hints of spic... (285)"; SQL statement:
+insert into products (id, category, description, image, location, measurement, name, percent, price, stock, type) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [22001-200]
+2020-08-07 13:02:19 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/craig/Desktop/codeclan_work/final_project/group_project/server/db/spiritual_db.mv.db [1.4.200/7]" [50000-200]
+>>>>>>> develop
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)
 	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
@@ -185,6 +264,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
 	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:725)
 	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:711)
+<<<<<<< HEAD
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
@@ -194,11 +274,23 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.I
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 33 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/user/Desktop/ShopProject/group_project/server/db/spiritual_db.mv.db [1.4.200/7]
+=======
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/craig/Desktop/codeclan_work/final_project/group_project/server/db/spiritual_db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/craig/Desktop/codeclan_work/final_project/group_project/server/db/spiritual_db.mv.db [1.4.200/7]
+>>>>>>> develop
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
 	at org.h2.mvstore.FileStore.open(FileStore.java:166)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
 	... 27 more
 Caused by: java.nio.channels.OverlappingFileLockException
+<<<<<<< HEAD
 	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
 	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
 	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1108)
@@ -260,6 +352,38 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	... 28 more
 2020-08-07 13:30:04 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/user/Desktop/ShopProject/group_project/server/db/spiritual_db.mv.db [1.4.200/7]" [50000-200]
+=======
+	at java.base/sun.nio.ch.FileLockTable.checkList(FileLockTable.java:229)
+	at java.base/sun.nio.ch.FileLockTable.add(FileLockTable.java:123)
+	at java.base/sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1154)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.base/java.nio.channels.FileChannel.tryLock(FileChannel.java:1165)
+	at org.h2.mvstore.FileStore.open(FileStore.java:163)
+	... 28 more
+2020-08-07 13:02:20 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/craig/Desktop/codeclan_work/final_project/group_project/server/db/spiritual_db.mv.db [1.4.200/7]" [50000-200]
+=======
+	at java.base/sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1286)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.base/java.nio.channels.FileChannel.tryLock(FileChannel.java:1178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:163)
+	... 28 more
+2020-08-07 12:55:56 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('The only Sauvignon Gris in our list \u2013 it''s an aromatic cousin of Sauvignon Blanc - think somewhere between C... (263)"; SQL statement:
+insert into products (id, category, description, image, location, measurement, name, percent, price, stock, type) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [22001-200]
+2020-08-07 12:58:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('The only Sauvignon Gris in our list \u2013 it''s an aromatic cousin of Sauvignon Blanc - think somewhere between C... (263)"; SQL statement:
+insert into products (id, category, description, image, location, measurement, name, percent, price, stock, type) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [22001-200]
+2020-08-07 13:00:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'A classic Chardonnay from Southern Burgundy - fine buttery and floral notes on the nose and a wine of substance and finesse on ... (336)"; SQL statement:
+insert into products (id, category, description, image, location, measurement, name, percent, price, stock, type) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [22001-200]
+2020-08-07 13:01:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'A classic Chardonnay from Southern Burgundy - fine buttery and floral notes on the nose and a wine of substance and finesse on ... (336)"; SQL statement:
+insert into products (id, category, description, image, location, measurement, name, percent, price, stock, type) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [22001-200]
+2020-08-07 13:03:49 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/kat/Desktop/spirits_shop/server/db/spiritual_db.mv.db [1.4.200/7]" [50000-200]
+>>>>>>> develop
+>>>>>>> develop
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)
 	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
@@ -289,6 +413,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
 	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:725)
 	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:711)
+<<<<<<< HEAD
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
@@ -298,15 +423,51 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.I
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 33 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/user/Desktop/ShopProject/group_project/server/db/spiritual_db.mv.db [1.4.200/7]
+=======
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+<<<<<<< HEAD
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/craig/Desktop/codeclan_work/final_project/group_project/server/db/spiritual_db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/craig/Desktop/codeclan_work/final_project/group_project/server/db/spiritual_db.mv.db [1.4.200/7]
+=======
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/kat/Desktop/spirits_shop/server/db/spiritual_db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/kat/Desktop/spirits_shop/server/db/spiritual_db.mv.db [1.4.200/7]
+>>>>>>> develop
+>>>>>>> develop
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
 	at org.h2.mvstore.FileStore.open(FileStore.java:166)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
 	... 27 more
 Caused by: java.nio.channels.OverlappingFileLockException
+<<<<<<< HEAD
 	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
 	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
 	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1108)
 	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
 	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+=======
+	at java.base/sun.nio.ch.FileLockTable.checkList(FileLockTable.java:229)
+	at java.base/sun.nio.ch.FileLockTable.add(FileLockTable.java:123)
+<<<<<<< HEAD
+	at java.base/sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1154)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.base/java.nio.channels.FileChannel.tryLock(FileChannel.java:1165)
+=======
+	at java.base/sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1286)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.base/java.nio.channels.FileChannel.tryLock(FileChannel.java:1178)
+>>>>>>> develop
+>>>>>>> develop
 	at org.h2.mvstore.FileStore.open(FileStore.java:163)
 	... 28 more
