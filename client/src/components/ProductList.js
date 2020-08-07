@@ -1,17 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import Product from "./Product.js";
 
-class ProductList extends Component{
-  constructor(props) {
-    super(props);
-    this.state = {
+const ProductList = (props) => {
 
-    };
-  }
+    const productNodes = props.products.map((product, index) => {
+      return (
+        <div key={index}>
+          <Product product={product} />
+        </div>
+      )
+    })
 
-  render() {
     return (
-      <p>Beers</p>
+
+      <Fragment>
+      {productNodes}
+      </Fragment>
+
     );
-  }
 }
 export default ProductList;
