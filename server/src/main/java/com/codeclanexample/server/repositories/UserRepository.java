@@ -1,4 +1,7 @@
 package com.codeclanexample.server.repositories;
 
-public class UserRepository {
+public interface UserRepository {
+
+
+
 }
