@@ -1,30 +1,62 @@
 package com.codeclanexample.server.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.Cascade;
+
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table(name = "products")
 public class Product {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name="name")
     private String name;
 
-    private int measurment;
+    @Column(name="measurement")
+    private int measurement;
 
+    @Column(name="stock")
     private int stock;
 
+    @Column(name="price")
     private double price;
 
+    @Column(name="description")
     private String description;
 
+    @Column(name="location")
     private String location;
 
+    @Column(name="percent")
     private double percent;
 
+    @Column(name="type")
     private String type;
 
-    private String category;
+    @Column(name="category")
+    private ProductTypes category;
 
-    public Product(String name, int measurment, int stock, double price, String description, String location, double percent, String type, String category) {
+    private String image;
+
+    @ManyToMany
+    @JsonIgnoreProperties({"products"})
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @JoinTable(
+            name = "order_products",
+            joinColumns = {@JoinColumn(name = "product_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name="order_id", nullable = false, updatable = false)}
+    )
+    private List<Order> orders;
+
+    public Product(String name, int measurement, int stock, double price, String description, String location, double percent, String type, ProductTypes category, String image) {
         this.name = name;
-        this.measurment = measurment;
+        this.measurement = measurement;
         this.stock = stock;
         this.price = price;
         this.description = description;
@@ -32,9 +64,27 @@ public class Product {
         this.percent = percent;
         this.type = type;
         this.category = category;
+        this.orders = new ArrayList<Order>();
+        this.image = image;
     }
 
     public Product() {
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 
     public Long getId() {
@@ -53,12 +103,12 @@ public class Product {
         this.name = name;
     }
 
-    public int getMeasurment() {
-        return measurment;
+    public int getMeasurement() {
+        return measurement;
     }
 
-    public void setMeasurment(int measurment) {
-        this.measurment = measurment;
+    public void setMeasurement(int measurement) {
+        this.measurement = measurement;
     }
 
     public int getStock() {
@@ -109,11 +159,11 @@ public class Product {
         this.type = type;
     }
 
-    public String getCategory() {
+    public ProductTypes getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(ProductTypes category) {
         this.category = category;
     }
 }
