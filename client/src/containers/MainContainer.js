@@ -11,7 +11,10 @@ class MainContainer extends Component {
     super(props);
     this.state = {
       products: [],
+      cart: []
     };
+
+    this.handleAddToCart = this.handleAddToCart.bind(this);
   }
 
   componentDidMount() {
@@ -30,6 +33,12 @@ class MainContainer extends Component {
     return this.state.products.filter(product => product.category === category)
   }
 
+  handleAddToCart(product){
+    const newCart = [...this.state.cart, product];
+    this.setState({cart: newCart})
+  }
+
+
   render () {
     return (
 
@@ -44,27 +53,27 @@ class MainContainer extends Component {
       }}/>
       <Route path='/products/beers' render={()=> {
           const products = this.getProductyByCategory("BEER");
-        return <ProductList products={products}/>;
+        return <ProductList products={products} addToCart={this.handleAddToCart}/>;
       }}/>
       <Route path='/products/wines' render={()=> {
           const products = this.getProductyByCategory("WINE");
-        return <ProductList products={products}/>;
+        return <ProductList products={products} addToCart={this.handleAddToCart}/>;
       }}/>
       <Route path='/products/gins' render={()=> {
           const products = this.getProductyByCategory("GIN");
-        return <ProductList products={products}/>;
+        return <ProductList products={products} addToCart={this.handleAddToCart}/>;
       }}/>
       <Route path='/products/rums' render={()=> {
           const products = this.getProductyByCategory("RUM");
-        return <ProductList products={products}/>;
+        return <ProductList products={products} addToCart={this.handleAddToCart}/>;
       }}/>
       <Route exact path='/products/:id' render={(props)=> {
         const id = props.match.params.id;
         const product = this.findProductById(id);
-        return <ProductDetail product={product}/>
+        return <ProductDetail product={product} addToCart={this.handleAddToCart}/>
       }}/>
       <Route path='/products' render={()=> {
-        return <ProductList products={this.state.products}/>;
+        return <ProductList products={this.state.products} addToCart={this.handleAddToCart}/>;
       }}/>
 
 
