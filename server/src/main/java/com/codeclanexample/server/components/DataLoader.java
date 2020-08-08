@@ -65,7 +65,7 @@ public class DataLoader implements ApplicationRunner {
         productRepository.save(beer5);
 
         Product rum1 = new Product("Flor de Cana 7yr", 700, 10, 25.00,
-                "Another gem from the Flor de Cana stable. The 7yr has hints of almond and vanilla, with a mild spiceyness", "Nicaraguan", 40.00, "gold", ProductTypes.RUM, "http://localhost:8080/api/images/flor_de_cana7yr.jpg");
+                "Another gem from the Flor de Cana stable. The 7yr has hints of almond and vanilla, with a mild spiceyness", "Nicaraguan", 40.00, "gold", ProductTypes.RUM, "http://localhost:8080/api/images/flor_de_cana_7yr.jpg");
         productRepository.save(rum1);
 
 

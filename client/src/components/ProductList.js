@@ -5,7 +5,7 @@ const ProductList = (props) => {
 
     const productNodes = props.products.map((product, index) => {
       return (
-        <div key={index}>
+        <div className="component" key={index}>
           <Product product={product} />
         </div>
       )
@@ -14,7 +14,9 @@ const ProductList = (props) => {
     return (
 
       <Fragment>
-      {productNodes}
+      <ul className="component-list">
+        {productNodes}
+      </ul>
       </Fragment>
 
     );

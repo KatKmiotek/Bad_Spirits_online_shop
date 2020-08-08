@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from '../NavBar';
 import Home from '../components/Home.js';
 import ProductList from '../components/ProductList.js';
+import ProductDetail from '../components/ProductDetail.js';
 
 class MainContainer extends Component {
   constructor(props) {
@@ -21,6 +22,10 @@ class MainContainer extends Component {
     });
   }
 
+  findProductById(id){
+    return this.state.products.find(product => {return product.id === parseInt(id)})
+  }
+
   getProductyByCategory(category) {
     return this.state.products.filter(product => product.category === category)
   }
@@ -34,7 +39,9 @@ class MainContainer extends Component {
       <Fragment>
       <NavBar/>
       <Switch>
-      <Route path='/home' component={Home}/>
+      <Route path='/home' render={()=> {
+          return <Home products={this.state.products}/>
+      }}/>
       <Route path='/products/beers' render={()=> {
           const products = this.getProductyByCategory("BEER");
         return <ProductList products={products}/>;
@@ -50,6 +57,11 @@ class MainContainer extends Component {
       <Route path='/products/rums' render={()=> {
           const products = this.getProductyByCategory("RUM");
         return <ProductList products={products}/>;
+      }}/>
+      <Route exact path='/products/:id' render={(props)=> {
+        const id = props.match.params.id;
+        const product = this.findProductById(id);
+        return <ProductDetail product={product}/>
       }}/>
       <Route path='/products' render={()=> {
         return <ProductList products={this.state.products}/>;
