@@ -2,7 +2,6 @@ import React from 'react';
 
 const Home = ({products})=> {
 
-
   return (
     <div>
     <a href="products/beers"> Beers</a>
