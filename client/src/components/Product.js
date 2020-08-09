@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import {Link} from 'react-router-dom';
 
 const Product = ({ product, addToCart }) => {
 
@@ -8,9 +9,13 @@ const Product = ({ product, addToCart }) => {
     addToCart(updatedProduct)
   }
 
+  const url = `/products/${product.id}`;
+
   return (
     <Fragment>
+    <Link to={url}>
       <img src={product.image} height="200"/>
+    </Link>
       <p>{product.name}</p>
       <p>£{product.price}</p>
       <p>ABV: {product.percent}%</p>
