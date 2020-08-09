@@ -1,5 +1,6 @@
 import React, {Fragment } from 'react';
 import Product from './Product.js';
+import SearchBar from './SearchBar.js'
 
 const ProductList = (props) => {
 
@@ -18,6 +19,7 @@ const ProductList = (props) => {
     return (
 
       <Fragment>
+      <SearchBar/>
       <ul className="component-list">
         {productNodes}
       </ul>

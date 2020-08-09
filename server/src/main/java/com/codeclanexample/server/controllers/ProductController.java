@@ -18,7 +18,12 @@ public class ProductController {
     ProductRepository productRepository;
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping(value = "/products")
-    public ResponseEntity<List<Product>> getAllProducts(){
+    public ResponseEntity<List<Product>> getAllProducts(
+            @RequestParam(name="name", required = false) String name
+    ){
+        if( name != null){
+            return new ResponseEntity<>(productRepository.findByNameContainingAllIgnoreCase(name), HttpStatus.OK);
+        }
         return new ResponseEntity<>(productRepository.findAll(), HttpStatus.OK);
     }
 
