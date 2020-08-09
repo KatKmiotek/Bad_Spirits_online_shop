@@ -7,37 +7,37 @@ const Home = ({products})=> {
 <div className="columns">
 <div className="column is-one-quarter"></div>
 <div className="column is-two-quarter">
-    <div class="tile is-ancestor">
-  <div class="tile is-parent">
-    <article class="tile is-child box">
+    <div className="tile is-ancestor">
+  <div className="tile is-parent">
+    <article className="tile is-child box">
     <Link to="products/beers">
-      <p class="title">Beers</p>
+      <p className="title">Beers</p>
       <img src={require('../beers.jpg')} alt="beers"/>
       </Link>
     </article>
   </div>
-  <div class="tile is-parent">
-    <article class="tile is-child box">
+  <div className="tile is-parent">
+    <article className="tile is-child box">
     <Link to="products/rums">
-      <p class="title">Rums</p>
+      <p className="title">Rums</p>
       <img src={require('../rums.jpg')} alt="rums"/>
       </Link>
     </article>
   </div>
   </div>
-  <div class="tile is-ancestor">
-<div class="tile is-parent">
-  <article class="tile is-child box">
+  <div className="tile is-ancestor">
+<div className="tile is-parent">
+  <article className="tile is-child box">
   <Link to="products/gins">
-    <p class="title">Gins</p>
+    <p className="title">Gins</p>
     <img src={require('../gins.jpg')}alt="gins"/>
     </Link>
   </article>
 </div>
-<div class="tile is-parent">
-  <article class="tile is-child box">
+<div className="tile is-parent">
+  <article className="tile is-child box">
   <Link to="products/wines">
-    <p class="title">Wines</p>
+    <p className="title">Wines</p>
     <img src={require('../wines.jpg')} alt="wines"/>
     </Link>
   </article>
