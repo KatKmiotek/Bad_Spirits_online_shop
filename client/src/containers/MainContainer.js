@@ -34,7 +34,12 @@ class MainContainer extends Component {
     return this.state.products.filter(product => product.category === category);
   }
 
+<<<<<<< HEAD
   handleAddToCart(product) {
+=======
+  handleAddToCart(product){
+    
+>>>>>>> develop
     const newCart = [...this.state.cart, product];
     this.setState({ cart: newCart });
   }

@@ -3,8 +3,15 @@ import React, { Fragment } from 'react';
 const Product = ({ product, addToCart }) => {
 
   const handlePassToList = () => {
+<<<<<<< HEAD
     addToCart(product);
   };
+=======
+    const updatedProduct = product;
+    updatedProduct.stock -= 1;
+    addToCart(updatedProduct)
+  }
+>>>>>>> develop
 
   return (
     <Fragment>
