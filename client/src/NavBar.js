@@ -8,10 +8,6 @@ const NavBar = (props)=> {
     <Link to="/home" className="navLink">
     Home
     </Link>
-<<<<<<< HEAD
-    <p></p>
-=======
->>>>>>> develop
     <Link to="/products" className="navLink">
     All Products
     </Link>
@@ -27,13 +23,10 @@ const NavBar = (props)=> {
     <Link to="/products/rums" className="navLink">
     Rums
     </Link>
-<<<<<<< HEAD
     <Link to="/shoppingCart" className="navLink">
     <img src={require('./basket.svg')} alt="basket logo" heigth="200"/>
         <p>  ({props.shoppingCart.length} items)</p>
     </Link>
-=======
->>>>>>> develop
 
     </ul>
     </header>
