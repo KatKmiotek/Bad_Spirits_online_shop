@@ -34,6 +34,7 @@ class MainContainer extends Component {
   }
 
   handleAddToCart(product){
+    
     const newCart = [...this.state.cart, product];
     this.setState({cart: newCart})
   }
