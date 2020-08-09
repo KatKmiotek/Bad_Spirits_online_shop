@@ -1,31 +1,42 @@
 import React, { Fragment } from 'react';
 
-const ShoppingCart = ({basket})=> {
+const ShoppingCart = (props)=> {
 
-
-  const basketNodes = basket.map((product, index) => {
+  const basketNodes = props.basket.map((product, index) => {
     return (
-      <div className="component" key={index}>
-        <li>
-
-        <p>{product.name}</p>
-        <button>update</button>
-        <button>remove</button>
-        </li>
-      </div>
+        <tr key={index}>
+        <td>{product.name}</td>
+        <td>price: £{product.price}</td>
+        <td><button onClick={handleRemove}>remove</button></td>
+        </tr>
     );
-  });
+  }
+);
+const basketTotal = props.basket.reduce((total, product)=>{
+  return total + product.price
+}, 0);
 
+
+function handleRemove(product){
+  props.removeFromCart(product)
+};
 
 
   return (
 
     <Fragment>
-    <ul className="component-list">
+    <div className='columns'>
+    <div className="column is-one-quarter"></div>
+    <div className="column is-two-quarter">
+    <table>
       {basketNodes}
-    </ul>
-    <h4>Total: </h4>
+    </table>
+    <h4>Total: {basketTotal.toFixed(2)}</h4>
     <button>Check Out</button>
+    </div>
+
+    <div className="column is-one-quarter"></div>
+    </div>
     </Fragment>
 
   );

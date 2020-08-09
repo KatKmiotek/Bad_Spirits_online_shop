@@ -14,7 +14,7 @@ const Product = ({ product, addToCart }) => {
   return (
     <Fragment>
     <Link to={url}>
-      <img src={product.image} height="200"/>
+      <img src={product.image} height="200" alt="product"/>
     </Link>
       <p>{product.name}</p>
       <p>£{product.price}</p>
