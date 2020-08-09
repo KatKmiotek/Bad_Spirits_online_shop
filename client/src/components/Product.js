@@ -1,11 +1,10 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 
-
-const Product = ({product, addToCart}) => {
+const Product = ({ product, addToCart }) => {
 
   const handlePassToList = () => {
-    addToCart(product)
-  }
+    addToCart(product);
+  };
 
   return (
     <Fragment>
@@ -15,7 +14,7 @@ const Product = ({product, addToCart}) => {
       <p>ABV: {product.percent}%</p>
       <button onClick={handlePassToList}>Add To Cart</button>
     </Fragment>
-  )
-}
+  );
+};
 
 export default Product;

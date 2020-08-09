@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Product from "./Product.js";
+import Product from './Product.js';
 
 const ProductList = (props) => {
 
@@ -8,10 +8,10 @@ const ProductList = (props) => {
         <div className="component" key={index}>
           <Product product={product} addToCart={handlePassToMain}/>
         </div>
-      )
-    })
+      );
+    });
 
-    function handlePassToMain(product){
+    function handlePassToMain(product) {
       props.addToCart(product);
     }
 
@@ -24,5 +24,6 @@ const ProductList = (props) => {
       </Fragment>
 
     );
-}
+  };
+
 export default ProductList;
