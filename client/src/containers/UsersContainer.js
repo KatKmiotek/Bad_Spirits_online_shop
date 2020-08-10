@@ -9,13 +9,13 @@ class UsersContainer extends Component {
       users: []
     }
   }
-  componentDidMount() {
-    const request = new Request();
-    request.get('http://localhost:8080/api/users')
-    .then(data => {
-      this.setState({ users: data });
-    });
-  }
+  // componentDidMount() {
+  //   const request = new Request();
+  //   request.get('http://localhost:8080/api/users')
+  //   .then(data => {
+  //     this.setState({ users: data });
+  //   });
+  // }
   render(){
     return(
       <Fragment></Fragment>

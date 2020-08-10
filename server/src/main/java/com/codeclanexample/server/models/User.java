@@ -24,15 +24,13 @@ public class User {
     @Column(name="age")
     private int age;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-    @JsonIgnoreProperties("user")
-    private List<Order> orders;
+//    private List<Order> orders;
 
     public User(String name, String address, int age) {
         this.name = name;
         this.address = address;
         this.age = age;
-        this.orders = new ArrayList<Order>();
+//        this.orders = new ArrayList<Order>();
     }
 
     public User() {
@@ -70,11 +68,11 @@ public class User {
         this.age = age;
     }
 
-    public List<Order> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
-    }
+//    public List<Order> getOrders() {
+//        return orders;
+//    }
+//
+//    public void setOrders(List<Order> orders) {
+//        this.orders = orders;
+//    }
 }

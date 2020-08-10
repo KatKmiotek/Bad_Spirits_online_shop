@@ -16,10 +16,14 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    @JsonIgnoreProperties({"orders"})
-    private User user;
+    @Column(name="name")
+    private String name;
+
+    @Column(name="address")
+    private String address;
+
+    @Column(name="age")
+    private int age;
 
     @ManyToMany
     @JsonIgnoreProperties({"orders"})
@@ -31,8 +35,10 @@ public class Order {
     )
     private List<Product> products;
 
-    public Order(User user) {
-        this.user = user;
+    public Order(String name, String address, int age) {
+        this.name = name;
+        this.address = address;
+        this.age = age;
         this.products = new ArrayList<Product>();
     }
 
@@ -47,19 +53,35 @@ public class Order {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
     public List<Product> getProducts() {
         return products;
     }
 
     public void setProducts(List<Product> products) {
         this.products = products;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
