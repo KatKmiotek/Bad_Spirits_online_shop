@@ -6,7 +6,8 @@ import Home from '../components/Home.js';
 import ProductList from '../components/ProductList.js';
 import ProductDetail from '../components/ProductDetail.js';
 import ShoppingCart from '../components/ShoppingCart.js';
-import SearchBar from '../components/SearchBar.js'
+import SearchBar from '../components/SearchBar.js';
+import Checkout from "../components/Checkout.js";
 
 class MainContainer extends Component {
   constructor(props) {
@@ -40,33 +41,15 @@ class MainContainer extends Component {
     const newCart = [...this.state.cart, product];
     this.setState({ cart: newCart });
   }
-  //1
-  handleRemove(product){
-    // console.log('Hello from handle remove', product);
-    const newCart = this.state.cart.pop(product);
-    console.log('cart', newCart);
-    this.setState({ cart: newCart});
-  }
-// handleRemove(product){
-//   const
-// }
 
-  //2
-  // handleRemove(product) {
-  //   const list = this.state.cart;
-  //   list.some((el, i) => {
-  //     if (el === product) {
-  //       list.splice(i, 1);
-  //       return true;
-  //     }
-  //     return
-  //   });
-  //   console.log('list', list);
-  //   this.setState({
-  //
-  //     list: list
-  //   });
-  // }
+  handleRemove(product){
+    let cartIndex = this.state.cart.findIndex(item => item.id === product.id);
+    if(cartIndex > -1){
+    const newCart = [...this.state.cart];
+    newCart.splice(cartIndex, 1);
+    this.setState({ cart: newCart})}
+  }
+
 
   render () {
     return (
@@ -107,6 +90,9 @@ class MainContainer extends Component {
       }}/>
       <Route path="/search" render={()=> {
         return <SearchBar products={this.state.products} addToCart={this.handleAddToCart}/>;
+      }}/>
+      <Route path="/checkout" render={()=> {
+        return <Checkout cart={this.state.cart}/>;
       }}/>
 
 
