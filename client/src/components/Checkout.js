@@ -5,6 +5,7 @@ import {loadStripe} from "@stripe/stripe-js";
 const stripePromise = loadStripe("pk_test_51HDZiqLGoZTAM9MyFgzd39e6jbuoIQ2sAx9Wu2MjUohN0LwejPINgBueuOtAHaQDmj0oPSyYmxZPkP5nuISPPsfB001GjlRavS");
 
 class Checkout extends Component {
+
   constructor(props){
     super(props);
     this.state = {
@@ -13,12 +14,11 @@ class Checkout extends Component {
         address: "",
         age: 0,
         products: props.cart
-      }
+      },
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
-
 
 handleChange(event){
   let propertyName = event.target.name;
@@ -35,6 +35,7 @@ handleSubmit(event){
 
 
 render(){
+  const total = this.props.location.state
   return (
     <div>
     <Elements stripe={stripePromise}>
@@ -44,7 +45,9 @@ render(){
     <input required type="number" placeholder="Age" name="age" onChange={this.handleChange} value={this.state.order.age}/>
     <button type="submit">Place Order </button>
     </form>
+    <p>Total: {total}</p>
     </Elements>
+    <p></p>
     </div>
   )
 }

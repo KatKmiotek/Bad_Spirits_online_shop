@@ -37,7 +37,10 @@ function handleRemove(product){
       {basketNodes}
 
     <h4>Total: {basketTotal.toFixed(2)}</h4>
-    <Link to="/checkout">
+    <Link to={{
+      pathname: '/checkout',
+      state: basketTotal
+    }}>
     <button>Check Out</button>
     </Link>
     </div>
