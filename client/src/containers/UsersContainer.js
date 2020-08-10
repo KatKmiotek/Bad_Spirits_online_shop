@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import Request from '../helpers/Request.js';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import Request from '../helpers/Request.js';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 class UsersContainer extends Component {
   constructor(props){

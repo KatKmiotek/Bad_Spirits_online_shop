@@ -34,9 +34,10 @@ handleSubmit(event){
 
 
 
+
 render(){
-  const total = this.props.location.state
   return (
+
     <div>
     <Elements stripe={stripePromise}>
     <form name="checkout" onSubmit={this.handleSubmit}>
@@ -45,7 +46,7 @@ render(){
     <input required type="number" placeholder="Age" name="age" onChange={this.handleChange} value={this.state.order.age}/>
     <button type="submit">Place Order </button>
     </form>
-    <p>Total: {total}</p>
+    <p>Total: £ {this.props.cartTotal}</p>
     </Elements>
     <p></p>
     </div>

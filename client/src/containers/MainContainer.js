@@ -29,6 +29,7 @@ class MainContainer extends Component {
     });
   }
 
+
   findProductById(id) {
     return this.state.products.find(product => {return product.id === parseInt(id);});
   }
@@ -67,7 +68,11 @@ class MainContainer extends Component {
   }
 
 
+
   render () {
+    const basketTotal = this.state.cart.reduce((total, product)=>{
+      return total + product.price
+    }, 0);
     return (
 
 <Router >
@@ -108,7 +113,7 @@ class MainContainer extends Component {
         return <SearchBar products={this.state.products} addToCart={this.handleAddToCart}/>;
       }}/>
       <Route path="/checkout" render={()=> {
-        return <Checkout cart={this.state.cart} placeOrder={this.handleOrder}/>;
+        return <Checkout cart={this.state.cart} placeOrder={this.handleOrder} cartTotal={basketTotal.toFixed(2)}/>;
       }}/>
 
 
