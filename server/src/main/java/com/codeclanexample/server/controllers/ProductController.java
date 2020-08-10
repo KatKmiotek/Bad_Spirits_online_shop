@@ -43,5 +43,15 @@ public class ProductController {
         return new ResponseEntity(productRepository.findByCategory(category), HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/products/edit/{id}", method = RequestMethod.PUT)
+    public ResponseEntity<Product> updateProduct(@RequestBody Product product, @PathVariable long id) {
+        Optional<Product> productOptional = productRepository.findById(id);
+        if (!productOptional.isPresent())
+            return ResponseEntity.notFound().build();
+
+        product.setId(id);
+        productRepository.save(product);
+        return ResponseEntity.noContent().build();
+    }
 }
 
