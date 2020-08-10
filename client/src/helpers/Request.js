@@ -16,6 +16,10 @@ class Request {
       body: JSON.stringify(payload),
     });
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
   update(url, payload) {
     return fetch(url), {
       method: 'PUT',
