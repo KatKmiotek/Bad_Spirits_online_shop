@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class ProductController {
 
     @Autowired
     ProductRepository productRepository;
-    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping(value = "/products")
     public ResponseEntity<List<Product>> getAllProducts(
             @RequestParam(name="name", required = false) String name
@@ -48,7 +48,6 @@ public class ProductController {
         Optional<Product> productOptional = productRepository.findById(id);
         if (!productOptional.isPresent())
             return ResponseEntity.notFound().build();
-
         product.setId(id);
         productRepository.save(product);
         return ResponseEntity.noContent().build();
