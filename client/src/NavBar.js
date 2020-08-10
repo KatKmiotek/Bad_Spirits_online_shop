@@ -23,6 +23,9 @@ const NavBar = (props)=> {
     <Link to="/products/rums" className="navLink">
     Rums
     </Link>
+    <Link to="/search" className="navLink">
+    search
+    </Link>
 
 <div className="navbar-end">
     <Link to="/shoppingCart" className="navLink">
