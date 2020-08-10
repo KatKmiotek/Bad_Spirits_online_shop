@@ -41,7 +41,7 @@ render(){
     <div>
         <input type="text" placeholder="Search..." onChange={this.handleChange}/>
         <ul>
-        <ProductList products={this.state.filtered}/>
+        <ProductList products={this.state.filtered} addToCart={this.props.handleAddToCart}/>
         </ul>
         </div>
   )

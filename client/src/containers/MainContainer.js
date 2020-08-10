@@ -102,7 +102,7 @@ class MainContainer extends Component {
         return <ShoppingCart basket={this.state.cart} removeFromCart={this.handleRemove}/>;
       }}/>
       <Route path="/search" render={()=> {
-        return <SearchBar products={this.state.products}/>;
+        return <SearchBar products={this.state.products} addToCart={this.handleAddToCart}/>;
       }}/>
       <Route path="/checkout" render={()=> {
         return <p></p>;
