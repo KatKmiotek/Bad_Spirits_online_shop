@@ -1,27 +1,30 @@
 import React, { Fragment } from 'react';
+import CartProduct from "./CartProduct.js"
+import {Link} from 'react-router-dom';
+
 
 const ShoppingCart = (props)=> {
 
   const basketNodes = props.basket.map((product, index) => {
     return (
-        <tr key={index}>
-        <td>{product.name}</td>
-        <td>price: £{product.price}</td>
-        <td><button onClick={handleRemove}>remove</button></td>
-        </tr>
+        <div key={index}>
+          <CartProduct product={product} removeFromCart={handleRemove}/>
+        </div>
     );
-  }
-);
+  });
+
+
 const basketTotal = props.basket.reduce((total, product)=>{
   return total + product.price
 }, 0);
 
 
-const handleRemove = () => {
-  const updatedProduct = basketNodes.product;
-  updatedProduct.stock += 1;
-  props.removeFromCart(updatedProduct)
+function handleRemove(product){
+  props.removeFromCart(product);
 }
+
+
+
 
 
   return (
@@ -30,11 +33,13 @@ const handleRemove = () => {
     <div className='columns'>
     <div className="column is-one-quarter"></div>
     <div className="column is-two-quarter">
-    <table>
+
       {basketNodes}
-    </table>
+
     <h4>Total: {basketTotal.toFixed(2)}</h4>
+    <Link to="/checkout">
     <button>Check Out</button>
+    </Link>
     </div>
 
     <div className="column is-one-quarter"></div>
