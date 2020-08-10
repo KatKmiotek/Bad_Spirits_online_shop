@@ -18,6 +18,7 @@ class MainContainer extends Component {
     };
     this.handleRemove = this.handleRemove.bind(this);
     this.handleAddToCart = this.handleAddToCart.bind(this);
+    this.handleOrder = this.handleOrder.bind(this);
   }
 
   componentDidMount() {
@@ -48,6 +49,20 @@ class MainContainer extends Component {
     const newCart = [...this.state.cart];
     newCart.splice(cartIndex, 1);
     this.setState({ cart: newCart})}
+  }
+
+  handleOrder(order){
+    const request = new Request();
+    request.post('/api/orders', order)
+      .then()
+
+    for(let product of this.state.cart){
+      request.update('/api/products/edit/' + product.id, product)
+    }
+      // .then(() => {
+      //   window.location = '/products'
+      // })
+
   }
 
 
@@ -92,7 +107,7 @@ class MainContainer extends Component {
         return <SearchBar products={this.state.products} addToCart={this.handleAddToCart}/>;
       }}/>
       <Route path="/checkout" render={()=> {
-        return <Checkout cart={this.state.cart}/>;
+        return <Checkout cart={this.state.cart} placeOrder={this.handleOrder}/>;
       }}/>
 
 
