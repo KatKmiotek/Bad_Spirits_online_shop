@@ -8,6 +8,7 @@ import ProductDetail from '../components/ProductDetail.js';
 import ShoppingCart from '../components/ShoppingCart.js';
 import SearchBar from '../components/SearchBar.js';
 import Checkout from "../components/Checkout.js";
+import Confirmation from "../components/Confirmation.js";
 
 class MainContainer extends Component {
   constructor(props) {
@@ -58,11 +59,13 @@ class MainContainer extends Component {
 
     for(let product of this.state.cart){
       request.update('http://localhost:8080/api/products/edit/' + product.id, product)
+      .then(() => {
+
+        window.location = '/confirmation'
+      })
     }
-      //
-      // .then(() => {
-      //   window.location = '/products'
-      // })
+
+
 
   }
 
@@ -109,6 +112,9 @@ class MainContainer extends Component {
       }}/>
       <Route path="/checkout" render={()=> {
         return <Checkout cart={this.state.cart} placeOrder={this.handleOrder}/>;
+      }}/>
+      <Route path="/confirmation" render={()=> {
+        return <Confirmation/>;
       }}/>
 
 
