@@ -48,17 +48,9 @@ public class ProductController {
         Optional<Product> productOptional = productRepository.findById(id);
         if (!productOptional.isPresent())
             return ResponseEntity.notFound().build();
-<<<<<<< HEAD
-=======
 
->>>>>>> develop
         product.setId(id);
         productRepository.save(product);
         return ResponseEntity.noContent().build();
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> develop
 }
-
