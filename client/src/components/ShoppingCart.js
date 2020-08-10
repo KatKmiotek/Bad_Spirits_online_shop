@@ -17,9 +17,11 @@ const basketTotal = props.basket.reduce((total, product)=>{
 }, 0);
 
 
-function handleRemove(product){
-  props.removeFromCart(product)
-};
+const handleRemove = () => {
+  const updatedProduct = basketNodes.product;
+  updatedProduct.stock += 1;
+  props.removeFromCart(updatedProduct)
+}
 
 
   return (

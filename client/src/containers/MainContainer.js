@@ -42,11 +42,15 @@ class MainContainer extends Component {
   }
   //1
   handleRemove(product){
-    console.log('Hello from handle remove', product);
+    // console.log('Hello from handle remove', product);
     const newCart = this.state.cart.pop(product);
     console.log('cart', newCart);
     this.setState({ cart: newCart});
   }
+// handleRemove(product){
+//   const
+// }
+
   //2
   // handleRemove(product) {
   //   const list = this.state.cart;
@@ -104,9 +108,7 @@ class MainContainer extends Component {
       <Route path="/search" render={()=> {
         return <SearchBar products={this.state.products} addToCart={this.handleAddToCart}/>;
       }}/>
-      <Route path="/checkout" render={()=> {
-        return <p></p>;
-      }}/>
+
 
       </Switch>
 
