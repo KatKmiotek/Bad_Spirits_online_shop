@@ -19,11 +19,17 @@ public class Order {
     @Column(name="name")
     private String name;
 
+    @Column(name="email")
+    private String email;
+
     @Column(name="address")
     private String address;
 
-    @Column(name="age")
-    private int age;
+    @Column(name="city")
+    private String city;
+
+    @Column(name="total")
+    private double total;
 
     @ManyToMany
     @JsonIgnoreProperties({"orders"})
@@ -35,10 +41,12 @@ public class Order {
     )
     private List<Product> products;
 
-    public Order(String name, String address, int age) {
+    public Order(String name, String email, String address, String city, double total) {
         this.name = name;
+        this.email = email;
         this.address = address;
-        this.age = age;
+        this.city = city;
+        this.total = total;
         this.products = new ArrayList<Product>();
     }
 
@@ -77,11 +85,27 @@ public class Order {
         this.address = address;
     }
 
-    public int getAge() {
-        return age;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
     }
 }

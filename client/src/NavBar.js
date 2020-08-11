@@ -24,7 +24,11 @@ const NavBar = (props)=> {
     Rums
     </Link>
     <Link to="/search" className="navLink">
+<<<<<<< HEAD
   <i className="fa fa-search" aria-hidden="true"></i>
+=======
+    <i className="fa fa-search" aria-hidden="true"></i>  search
+>>>>>>> develop
     </Link>
 
 <div className="navbar-end">
