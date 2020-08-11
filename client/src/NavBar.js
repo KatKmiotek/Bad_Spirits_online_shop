@@ -24,7 +24,7 @@ const NavBar = (props)=> {
     Rums
     </Link>
     <Link to="/search" className="navLink">
-  <i className="fa fa-search" aria-hidden="true"></i>
+  <i className="fa fa-search" aria-hidden="true"></i> search
     </Link>
 
 <div className="navbar-end">

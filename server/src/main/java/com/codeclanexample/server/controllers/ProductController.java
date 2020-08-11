@@ -24,7 +24,7 @@ public class ProductController {
         if( name != null){
             return new ResponseEntity<>(productRepository.findByNameContainingAllIgnoreCase(name), HttpStatus.OK);
         }
-        return new ResponseEntity<>(productRepository.findAll(), HttpStatus.OK);
+        return new ResponseEntity<>(productRepository.findAllByOrderByNameAsc(), HttpStatus.OK);
     }
 
     @GetMapping(value = "/products/{id}")
