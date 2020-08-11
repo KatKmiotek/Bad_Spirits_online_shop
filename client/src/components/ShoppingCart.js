@@ -36,8 +36,8 @@ function handleRemove(product){
 
       {basketNodes}
 
-    <h4>Total: {basketTotal.toFixed(2)}</h4>
-    <Link to="/checkout">
+    <h4>Total: £{basketTotal.toFixed(2)}</h4>
+    <Link to='/checkout'>
     <button>Check Out</button>
     </Link>
     </div>

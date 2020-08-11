@@ -8,7 +8,18 @@ import ProductDetail from '../components/ProductDetail.js';
 import ShoppingCart from '../components/ShoppingCart.js';
 import SearchBar from '../components/SearchBar.js';
 import Checkout from "../components/Checkout.js";
+<<<<<<< HEAD
 import AfterPurchase from '../components/AfterPurchase.js';
+=======
+<<<<<<< HEAD
+import Footer from '../Footer.js'
+import Delivery from '../Delivery.js'
+import About from '../About.js'
+import Contact from '../Contact.js'
+=======
+import Confirmation from "../components/Confirmation.js";
+>>>>>>> develop
+>>>>>>> develop
 
 class MainContainer extends Component {
   constructor(props) {
@@ -29,6 +40,7 @@ class MainContainer extends Component {
       this.setState({ products: data });
     });
   }
+
 
   findProductById(id) {
     return this.state.products.find(product => {return product.id === parseInt(id);});
@@ -58,12 +70,25 @@ class MainContainer extends Component {
 
     for(let product of this.state.cart){
       request.update('http://localhost:8080/api/products/edit/' + product.id, product)
+      .then(() => {
+
+        window.location = '/confirmation'
+      })
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> develop
 
   }
 
 
+
   render () {
+    const basketTotal = this.state.cart.reduce((total, product)=>{
+      return total + product.price
+    }, 0);
     return (
 
       <Router >
@@ -104,12 +129,24 @@ class MainContainer extends Component {
         return <SearchBar products={this.state.products} addToCart={this.handleAddToCart}/>;
       }}/>
       <Route path="/checkout" render={()=> {
-        return <Checkout cart={this.state.cart} placeOrder={this.handleOrder}/>;
+        return <Checkout cart={this.state.cart} placeOrder={this.handleOrder} cartTotal={basketTotal.toFixed(2)}/>;
+      }}/>
+      <Route path="/delivery" render={()=> {
+        return <Delivery/>;
+      }}/>
+      <Route path="/about" render={()=> {
+        return <About/>;
+      }}/>
+      <Route path="/contact" render={()=> {
+        return <Contact/>;
+      }}/>
+      <Route path="/confirmation" render={()=> {
+        return <Confirmation/>;
       }}/>
 
 
       </Switch>
-
+      <Footer/>
       </Fragment>
       </Router>
     );

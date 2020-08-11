@@ -46,6 +46,27 @@ public class DataLoader implements ApplicationRunner {
         Product wine5 = new Product("Chateauneuf du Pape Reserve des Oliviers", 750, 10, 21.20, "This Southern Rhone wine region is famous for the galets roules or 'pudding stones ' covering the ground allowing for heat retention to help enhance ripening of the grapes in the vineyards.",
                 "Spain", 15.00, "red", ProductTypes.WINE, "http://localhost:8080/api/images/cdp_maison_favier.jpg");
         productRepository.save(wine5);
+        Product wine6 = new Product("Le Fou Pinot Noir, Pays d’Oc 2018", 750, 10, 8.70, "‘Le Fou’ translates as ‘The Madman’, as it has long been thought only a madman would try to produce the perfect Pinot Noir in southern France. Perfection achieved, myth dispelled.",
+                "France", 13.00, "red", ProductTypes.WINE, "http://localhost:8080/api/images/le_fou.jpg");
+        productRepository.save(wine6);
+        Product wine7 = new Product("Cable Crossing Shiraz", 750, 10, 8.30, "Red, Warm and Spicy", "Spain", 13.00, "red", ProductTypes.WINE,
+                "http://localhost:8080/api/images/cabel_crossing_shiraz.jpg");
+        productRepository.save(wine7);
+        Product wine8 = new Product("Primitivo Salento, Boheme", 750, 10, 9.00, "Harvested from vineyards in the heel of Italy and vinified using temperature-controlled stainless steel technology.",
+                "Italy", 14.00, "red", ProductTypes.WINE, "http://localhost:8080/api/images/primitivo_salento.jpg");
+        productRepository.save(wine8);
+        Product wine9 = new Product("Nieto Don Nicanor Malbec, Mendoza 2018", 750, 10, 12.40, "Brooding and intense. A classic Malbec. From Nieto's premium Agrelo vineyards, with flavours reminiscent of those desert soils. Dark, dense complex nose with sweet cranberries, blackberries and rich mocha characters.",
+                "Spain", 14.00, "red", ProductTypes.WINE, "http://localhost:8080/api/images/don_nicanor_malbec.png");
+        productRepository.save(wine9);
+        Product wine10 = new Product("Benjamin Malbec 2018", 750, 10, 7.20, "Purple red in color, bright and intense. Fresh fruity aromas of plum and cherry. Balanced in the mouth with a pleasant finish.",
+                "Spain", 14.00, "red", ProductTypes.WINE, "http://localhost:8080/api/images/benjamin_malbec.png");
+        productRepository.save(wine10);
+        Product wine11 = new Product("Sierra Grande Merlot", 750, 10, 7.25, "Juicy and fresh Chilean Merlot.", "Chile", 13.00, "red", ProductTypes.WINE,
+                "http://localhost:8080/api/images/sierra_merlot.png");
+        productRepository.save(wine11);
+        Product wine12 = new Product("Fontessa Prosecco Spumante Brut", 750, 10, 8.82, "Fresh and fruity Prosecco with aromas of citrus and green apple. The palate has ripe grapey characters, zesty acidity and a clean, refreshing finish.",
+                "Italy", 11.50, "white", ProductTypes.WINE, "http://localhost:8080/api/images/fontessa_prosecco.png");
+        productRepository.save(wine12);
 
 
         Product beer1 = new Product("Big Drop Pine Trail Pale Ale", 330, 10, 2.50, "This dry-hopped pale ale is deliciously refreshing. The nose has hints of pine and honey. Packed full of flavour from citrus-heavy hops with a twist of fresh lime to create a crisp, zesty beer.",
