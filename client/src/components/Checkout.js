@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 
 
 
+
 class Checkout extends Component {
 
   constructor(props){
@@ -10,14 +11,22 @@ class Checkout extends Component {
     this.state = {
       order: {
         name: "",
+        email: "",
         address: "",
-        age: 0,
+        city: "",
+        total: props.cartTotal,
         products: props.cart
       },
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
+
+//   componentDidMount() {
+//   this.setState({
+//     products: this.props.cart
+//   });
+// }
 
 
 
@@ -42,18 +51,36 @@ render(){
     <div>
 
     <form name="checkout" onSubmit={this.handleSubmit}>
-    <input required type="text" placeholder="Name" name="name" onChange={this.handleChange} value={this.state.order.name}/>
-    <input required type="text" placeholder="Address" name="address" onChange={this.handleChange} value={this.state.order.address}/>
-    <input required type="number" placeholder="Age" name="age" onChange={this.handleChange} value={this.state.order.age}/>
-    <button type="submit">Place Order </button>
-    </form>
-<<<<<<< HEAD
-    <p>Total: £ {this.props.cartTotal}</p>
-    </Elements>
-    <p></p>
-=======
+    <h3>Billing Details</h3>
+    <label for="name"><i className="fa fa-user"></i> Full Name</label>
+    <input required id="name" type="text" placeholder="Full Name" name="name" onChange={this.handleChange} value={this.state.order.name}/>
+    <label for="email"><i className="fa fa-envelope"></i> Email</label>
+    <input type="text" id="email" name="email" placeholder="name@email.com" value={this.state.order.email} onChange={this.handleChange}/>
+    <label for="address"><i className="fa fa-address-card-o"></i> Address</label>
+    <input required type="text" id="address" placeholder="Address" name="address" onChange={this.handleChange} value={this.state.order.address}/>
+    <label for="city"><i className="fa fa-institution"></i> City</label>
+    <input type="text" id="city" name="city" placeholder="Glasgow" value={this.state.order.city} onChange={this.handleChange}/>
 
->>>>>>> develop
+
+    <h3>Payment Details</h3>
+    <label for="fname">Accepted Cards</label>
+      <i class="fa fa-cc-visa"></i>
+      <i class="fa fa-cc-amex" ></i>
+      <i class="fa fa-cc-mastercard"></i>
+    <label for="cardname">Name on Card</label>
+    <input type="text" id="cardname" name="cardname" placeholder="MR D DRAPER"/>
+    <label for="cardnum">Credit card number</label>
+    <input type="text" id="cardnum" name="cardnumber" placeholder="1111-2222-3333-4444"/>
+    <label for="expiry">Expiry</label>
+    <input type="text" id="expiry" name="expiry" placeholder="MM/YY"/>
+
+
+    <p>Total: £ {this.props.cartTotal}</p>
+
+    <button type="submit">Place Order </button>
+
+    </form>
+
     </div>
   )
 }

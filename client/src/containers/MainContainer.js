@@ -8,18 +8,13 @@ import ProductDetail from '../components/ProductDetail.js';
 import ShoppingCart from '../components/ShoppingCart.js';
 import SearchBar from '../components/SearchBar.js';
 import Checkout from "../components/Checkout.js";
-<<<<<<< HEAD
 import AfterPurchase from '../components/AfterPurchase.js';
-=======
-<<<<<<< HEAD
 import Footer from '../Footer.js'
 import Delivery from '../Delivery.js'
 import About from '../About.js'
 import Contact from '../Contact.js'
-=======
 import Confirmation from "../components/Confirmation.js";
->>>>>>> develop
->>>>>>> develop
+
 
 class MainContainer extends Component {
   constructor(props) {
@@ -67,7 +62,6 @@ class MainContainer extends Component {
   handleOrder(order){
     const request = new Request();
     request.post('http://localhost:8080/api/orders', order)
-
     for(let product of this.state.cart){
       request.update('http://localhost:8080/api/products/edit/' + product.id, product)
       .then(() => {
@@ -75,12 +69,6 @@ class MainContainer extends Component {
         window.location = '/confirmation'
       })
     }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> develop
-
   }
 
 
