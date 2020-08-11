@@ -5,8 +5,8 @@ const NavBar = (props)=> {
   return (
     <nav className="nav-bar">
 
-    <Link to="/home" className="navLink">
-    Home
+    <Link to="/home">
+    <img src={require('./badSpiritsLogo.png')} alt="logo" className="logo"/>
     </Link>
     <Link to="/products" className="navLink">
     All Products

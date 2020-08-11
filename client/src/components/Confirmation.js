@@ -14,6 +14,7 @@ const { width, height } = useWindowSize();
     />
       <h2>Thanks for your purchase!</h2>
       <p>Please check your email to track shipping</p>
+      
       <Link to="/home"><button className="button">Back to Home</button></Link>
     </Fragment>
   )
