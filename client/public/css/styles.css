@@ -24,7 +24,7 @@ li.component-item {
 body {
     height: 125vh;
     font-family: sans-serif;
-  background-color: ghostWhite;
+  background-color: white;
 }
 #root {
   margin-top: 80px;
@@ -59,7 +59,9 @@ header li {
 a {
     color: black;
 }
-
+i{
+  padding: 20px;
+}
 .singlePirate {
   display: flex;
   justify-content: center;

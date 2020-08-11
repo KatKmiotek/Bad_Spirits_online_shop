@@ -24,12 +24,12 @@ const NavBar = (props)=> {
     Rums
     </Link>
     <Link to="/search" className="navLink">
-    search
+  <i class="fa fa-search" aria-hidden="true"></i>  search
     </Link>
 
 <div className="navbar-end">
     <Link to="/shoppingCart" className="navLink">
-    Basket
+    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
     <p>  ({props.shoppingCart.length} items)</p>
     </Link>
     </div>

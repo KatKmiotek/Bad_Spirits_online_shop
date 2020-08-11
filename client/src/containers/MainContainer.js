@@ -8,6 +8,10 @@ import ProductDetail from '../components/ProductDetail.js';
 import ShoppingCart from '../components/ShoppingCart.js';
 import SearchBar from '../components/SearchBar.js';
 import Checkout from "../components/Checkout.js";
+import Footer from '../Footer.js'
+import Delivery from '../Delivery.js'
+import About from '../About.js'
+import Contact from '../Contact.js'
 
 class MainContainer extends Component {
   constructor(props) {
@@ -115,10 +119,19 @@ class MainContainer extends Component {
       <Route path="/checkout" render={()=> {
         return <Checkout cart={this.state.cart} placeOrder={this.handleOrder} cartTotal={basketTotal.toFixed(2)}/>;
       }}/>
+      <Route path="/delivery" render={()=> {
+        return <Delivery/>;
+      }}/>
+      <Route path="/about" render={()=> {
+        return <About/>;
+      }}/>
+      <Route path="/contact" render={()=> {
+        return <Contact/>;
+      }}/>
 
 
       </Switch>
-
+      <Footer/>
       </Fragment>
       </Router>
     );
