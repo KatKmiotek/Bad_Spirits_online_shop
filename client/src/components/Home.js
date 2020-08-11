@@ -12,7 +12,7 @@ const Home = ({products})=> {
     <article className="tile is-child box">
     <Link to="products/beers">
       <p className="title">Beers</p>
-      <img src={require('../beers.jpg')} alt="beers"/>
+      <img className="homeImage" src={require('../beers.jpg')} alt="beers"/>
       </Link>
     </article>
   </div>
@@ -38,7 +38,7 @@ const Home = ({products})=> {
   <article className="tile is-child box">
   <Link to="products/wines">
     <p className="title">Wines</p>
-    <img src={require('../wines.jpg')} alt="wines"/>
+    <img className="homeImage"src={require('../wines.jpg')} alt="wines"/>
     </Link>
   </article>
   </div>

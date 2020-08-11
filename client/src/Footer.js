@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 const Footer = (props)=> {
   return (
-    <footer className="footer">
+    <footer className="footerpage">
     <div className="content has-text-centered">
     <Link to="/about"className="navLink">
     About

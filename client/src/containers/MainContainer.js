@@ -61,15 +61,18 @@ class MainContainer extends Component {
 
   handleOrder(order){
     const request = new Request();
-    request.post('http://localhost:8080/api/orders', order)
-    for(let product of this.state.cart){
-      request.update('http://localhost:8080/api/products/edit/' + product.id, product)
-      .then(() => {
+    for(let product of order.products){
+      console.log(product)
+      request.update('http://localhost:8080/api/products/edit/' + product.id, product)}
 
+
+    request.post('http://localhost:8080/api/orders', order)
+      .then(() => {
+        console.log(order);
         window.location = '/confirmation'
       })
     }
-  }
+
 
 
 

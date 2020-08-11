@@ -27,14 +27,14 @@ function handleRemove(product){
     <div className='columns'>
     <div className="column is-one-quarter"></div>
     <div className="column is-two-quarter">
-
+    <h2>My Basket</h2>
       {basketNodes}
 
     <h4><strong>Total: £{props.cartTotal}</strong></h4>
 
 
     <Link to='/checkout'>
-    <button className="button">Check Out</button>
+    <button className="button" style={{ display: props.basket.length ===0? 'none': 'inline-block'}}>Check Out</button>
     </Link>
     </div>
 

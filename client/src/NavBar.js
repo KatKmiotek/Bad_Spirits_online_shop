@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom';
 
 const NavBar = (props)=> {
   return (
-    <header>
-    <div className="navbar-start">
+    <nav className="nav-bar">
+
     <Link to="/home" className="navLink">
     Home
     </Link>
@@ -24,17 +24,16 @@ const NavBar = (props)=> {
     Rums
     </Link>
     <Link to="/search" className="navLink">
-  <i className="fa fa-search" aria-hidden="true"></i>
+    <i className="fa fa-search" aria-hidden="true"></i>Search
     </Link>
 
-<div className="navbar-end">
+
     <Link to="/shoppingCart" className="navLink">
-    <i className="fa fa-shopping-basket" aria-hidden="true"></i>
-    <p>  ({props.shoppingCart.length} items)</p>
+    <i className="fa fa-shopping-basket" aria-hidden="true"> {props.shoppingCart.length} items</i>
     </Link>
-    </div>
-    </div>
-    </header>
+
+
+    </nav>
   );
 };
 

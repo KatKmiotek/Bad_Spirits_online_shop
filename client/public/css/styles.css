@@ -4,6 +4,8 @@
   transition: all 0.3s;
   padding: 10px;
 
+  box-shadow: 4px 20px 20px #f2f2f2;
+  border-radius: 5px;
 }
 
 /* img.image-hover:hover{
@@ -25,7 +27,7 @@ img.image-hover:hover {
 }
 
 button:hover{
-   filter: brightness(90%); 
+   filter: brightness(90%);
 }
 
 
@@ -38,14 +40,33 @@ ul.component-list {
   flex-wrap: wrap;
 }
 
-li.component-item {
+ul.component-item {
   display: inline;
+
+}
+
+.nav-bar{
+  width: 100vw;
+  background-color: white;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
 }
 
 .navLink {
     display: inline;
     color: black;
     align-self: center;
+    font-family: 'Kreon';
+    font-size: 20px;
+}
+
+.navLink:hover{
+  background-color: #a6a6a6;
+}
+
+.footerpage{
+  padding: 0;
 }
 
 body {
@@ -55,7 +76,6 @@ body {
 }
 #root {
   margin-top: 80px;
-  padding: 30px;
 }
 .imgCart {
       height: 100px;
@@ -94,12 +114,9 @@ a {
 i{
   padding: 20px;
 }
-.singlePirate {
-  display: flex;
-  justify-content: center;
-}
+
 table{
-  text-align: center;
+  align-self: center;
 }
 .button{
   padding: 50px;
@@ -115,7 +132,9 @@ table{
   border-bottom: 1px solid #333333;
   border-left: 1px solid #CCCCCC;
 }
-
+.homeImage{
+  height: 130px;
+}
 .detailImage{
-  alig
+  height: 300px;
 }
