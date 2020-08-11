@@ -69,11 +69,6 @@ class MainContainer extends Component {
         window.location = '/confirmation'
       })
     }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> develop
   }
 
 

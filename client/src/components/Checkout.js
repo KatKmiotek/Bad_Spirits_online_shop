@@ -80,12 +80,6 @@ render(){
     <button type="submit">Place Order </button>
 
     </form>
-<<<<<<< HEAD
-
-    <p>Total: £ {this.props.cartTotal}</p>
-    
-=======
->>>>>>> develop
 
     </div>
   )
