@@ -8,10 +8,14 @@ import ProductDetail from '../components/ProductDetail.js';
 import ShoppingCart from '../components/ShoppingCart.js';
 import SearchBar from '../components/SearchBar.js';
 import Checkout from "../components/Checkout.js";
+<<<<<<< HEAD
 import Footer from '../Footer.js'
 import Delivery from '../Delivery.js'
 import About from '../About.js'
 import Contact from '../Contact.js'
+=======
+import Confirmation from "../components/Confirmation.js";
+>>>>>>> develop
 
 class MainContainer extends Component {
   constructor(props) {
@@ -63,11 +67,13 @@ class MainContainer extends Component {
 
     for(let product of this.state.cart){
       request.update('http://localhost:8080/api/products/edit/' + product.id, product)
+      .then(() => {
+
+        window.location = '/confirmation'
+      })
     }
-      //
-      // .then(() => {
-      //   window.location = '/products'
-      // })
+
+
 
   }
 
@@ -127,6 +133,9 @@ class MainContainer extends Component {
       }}/>
       <Route path="/contact" render={()=> {
         return <Contact/>;
+      }}/>
+      <Route path="/confirmation" render={()=> {
+        return <Confirmation/>;
       }}/>
 
 
