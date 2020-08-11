@@ -26,8 +26,11 @@ handleChange(e) {
     if (e.target.value !== "") {
       currentList = this.props.products;
       newList = currentList.filter(product => {
-        const filter = e.target.value;
-        return product.name.toLowerCase().includes(filter.toLowerCase());
+        const filter = e.target.value.toLowerCase();
+        const searchedName = product.name.toLowerCase();
+        const searchedCategory = product.category.toLowerCase();
+        return searchedName.includes(filter)
+        // searchedCategory.includes(filter);
       });
     } else {
       newList = this.props.products;
