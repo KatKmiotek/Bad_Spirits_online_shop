@@ -8,6 +8,7 @@ import ProductDetail from '../components/ProductDetail.js';
 import ShoppingCart from '../components/ShoppingCart.js';
 import SearchBar from '../components/SearchBar.js';
 import Checkout from "../components/Checkout.js";
+import AfterPurchase from '../components/AfterPurchase.js';
 
 class MainContainer extends Component {
   constructor(props) {
@@ -54,15 +55,10 @@ class MainContainer extends Component {
   handleOrder(order){
     const request = new Request();
     request.post('http://localhost:8080/api/orders', order)
-      // .then()
 
     for(let product of this.state.cart){
       request.update('http://localhost:8080/api/products/edit/' + product.id, product)
     }
-      //
-      // .then(() => {
-      //   window.location = '/products'
-      // })
 
   }
 
@@ -70,7 +66,7 @@ class MainContainer extends Component {
   render () {
     return (
 
-<Router >
+      <Router >
       <Fragment>
       <NavBar shoppingCart={this.state.cart}/>
       <Switch>

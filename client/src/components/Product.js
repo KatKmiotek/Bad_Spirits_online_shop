@@ -4,10 +4,13 @@ import {Link} from 'react-router-dom';
 const Product = ({ product, addToCart }) => {
 
   const handlePassToList = () => {
-    const updatedProduct = product;
-    updatedProduct.stock -= 1;
-    addToCart(updatedProduct)
+    if(product.stock > 0){
+      const updatedProduct = product;
+      updatedProduct.stock -= 1;
+      addToCart(updatedProduct)
+    }
   }
+
 
   const url = `/products/${product.id}`;
 
@@ -19,7 +22,7 @@ const Product = ({ product, addToCart }) => {
       <p>{product.name}</p>
       <p>£{product.price}</p>
       <p>ABV: {product.percent}%</p>
-      <button onClick={handlePassToList}>Add To Cart</button>
+      <button onClick={handlePassToList}>Add to Card</button>
     </Fragment>
   );
 };
