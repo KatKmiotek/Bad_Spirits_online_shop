@@ -39,11 +39,19 @@ handleChange(e) {
 render(){
   return(
     <div>
-        <input type="text" placeholder="Search..." onChange={this.handleChange}/>
+        <div className="columns">
+        <div className="column is-one-third"></div>
+        <input className="input" type="text" placeholder="Search..." onChange={this.handleChange}/>
+        <div className="column is-one-third"></div>
+        </div>
         <ul>
         <ProductList products={this.state.filtered} addToCart={this.props.addToCart}/>
         </ul>
         </div>
+
+
+
+
   )
 }
 

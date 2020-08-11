@@ -31,10 +31,10 @@ public class DataLoader implements ApplicationRunner {
         User user3 = new User("Craig Laws", "789 New street", 28);
         userRepository.save(user3);
 
-        Product wine1 = new Product("El Viejo del Valle Sauvignon Gris 2019", 750, 10, 8.15, "The only Sauvignon Gris in our list – it's an aromatic cousin of Sauvignon Blanc. A fresh aroma of waxy lemons, lime and grapefruit.",
+        Product wine1 = new Product("El Viejo del Valle Sauvignon Gris", 750, 10, 8.15, "The only Sauvignon Gris in our list – it's an aromatic cousin of Sauvignon Blanc. A fresh aroma of waxy lemons, lime and grapefruit.",
                 "Chile", 13.00, "white", ProductTypes.WINE, "http://localhost:8080/api/images/el_viejo_sauv_gris.png");
         productRepository.save(wine1);
-        Product wine2 = new Product("GENETIE Bourgogne Chardonnay ‘Illuminé’", 750, 10, 11.88, "A classic Chardonnay from Southern Burgundy - fine buttery and floral notes on the nose and a wine of substance and finesse on the palate. Some creamy textural notes up front reveal the discreet presence of oak.",
+        Product wine2 = new Product("GENETIE Bourgogne Chardonnay", 750, 10, 11.88, "A classic Chardonnay from Southern Burgundy - fine buttery and floral notes on the nose and a wine of substance and finesse on the palate. Some creamy textural notes up front reveal the discreet presence of oak.",
                 "France", 13.00, "white", ProductTypes.WINE, "http://localhost:8080/api/images/genetie.png");
         productRepository.save(wine2);
         Product wine3 = new Product("Borsao Selección Blanco", 750, 10, 7.45, "Stone fruit and limey citrus aromas; with nectarine, subtle pineapple characters and a creamy mouthfeel. Gentle and well integrated oak.",
@@ -43,7 +43,7 @@ public class DataLoader implements ApplicationRunner {
         Product wine4 = new Product("Long Beach Shiraz", 750, 10, 7.25, "Long Beach Shiraz is an easy drinking, value for money", "Spain", 13.00, "red",
                 ProductTypes.WINE, "http://localhost:8080/api/images/long_beach_shiraz_1.jpg");
         productRepository.save(wine4);
-        Product wine5 = new Product("Chateauneuf du Pape Reserve des Oliviers", 750, 10, 21.20, "This Southern Rhone wine region is famous for the galets roules or 'pudding stones ' covering the ground allowing for heat retention to help enhance ripening of the grapes in the vineyards.",
+        Product wine5 = new Product("Chateauneuf du Pape des Oliviers", 750, 10, 21.20, "This Southern Rhone wine region is famous for the galets roules or 'pudding stones ' covering the ground allowing for heat retention to help enhance ripening of the grapes in the vineyards.",
                 "Spain", 15.00, "red", ProductTypes.WINE, "http://localhost:8080/api/images/cdp_maison_favier.jpg");
         productRepository.save(wine5);
         Product wine6 = new Product("Le Fou Pinot Noir, Pays d’Oc 2018", 750, 10, 8.70, "‘Le Fou’ translates as ‘The Madman’, as it has long been thought only a madman would try to produce the perfect Pinot Noir in southern France. Perfection achieved, myth dispelled.",
@@ -55,7 +55,7 @@ public class DataLoader implements ApplicationRunner {
         Product wine8 = new Product("Primitivo Salento, Boheme", 750, 10, 9.00, "Harvested from vineyards in the heel of Italy and vinified using temperature-controlled stainless steel technology.",
                 "Italy", 14.00, "red", ProductTypes.WINE, "http://localhost:8080/api/images/primitivo_salento.jpg");
         productRepository.save(wine8);
-        Product wine9 = new Product("Nieto Don Nicanor Malbec, Mendoza 2018", 750, 10, 12.40, "Brooding and intense. A classic Malbec. From Nieto's premium Agrelo vineyards, with flavours reminiscent of those desert soils. Dark, dense complex nose with sweet cranberries, blackberries and rich mocha characters.",
+        Product wine9 = new Product("Nieto Don Nicanor Malbec, Mendoza", 750, 10, 12.40, "Brooding and intense. A classic Malbec. From Nieto's premium Agrelo vineyards, with flavours reminiscent of those desert soils. Dark, dense complex nose with sweet cranberries, blackberries and rich mocha characters.",
                 "Spain", 14.00, "red", ProductTypes.WINE, "http://localhost:8080/api/images/don_nicanor_malbec.png");
         productRepository.save(wine9);
         Product wine10 = new Product("Benjamin Malbec 2018", 750, 10, 7.20, "Purple red in color, bright and intense. Fresh fruity aromas of plum and cherry. Balanced in the mouth with a pleasant finish.",

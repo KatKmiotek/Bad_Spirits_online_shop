@@ -2,6 +2,8 @@
   margin: 20px;
   padding: 10px;
   width: 300px;
+  box-shadow: 4px 20px 20px #f2f2f2;
+  border-radius: 5px;
 }
 
 .name {
@@ -13,8 +15,9 @@ ul.component-list {
   flex-wrap: wrap;
 }
 
-li.component-item {
+ul.component-item {
   display: inline;
+
 }
 
 .nav-bar{
@@ -87,7 +90,7 @@ i{
 }
 
 table{
-  text-align: center;
+  align-self: center;
 }
 .button{
   padding: 50px;
@@ -102,4 +105,10 @@ table{
   border-right: 1px solid #333333;
   border-bottom: 1px solid #333333;
   border-left: 1px solid #CCCCCC;
+}
+.homeImage{
+  height: 130px;
+}
+.detailImage{
+  height: 300px;
 }
