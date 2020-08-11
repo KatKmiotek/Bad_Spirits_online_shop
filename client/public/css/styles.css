@@ -65,6 +65,10 @@ ul.component-item {
   background-color: #a6a6a6;
 }
 
+.nav-icon{
+  padding: 15px 0;
+}
+
 .footerpage{
   padding: 0;
 }
@@ -137,4 +141,56 @@ table{
 }
 .detailImage{
   height: 300px;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  color: black;
+
+}
+
+.form-side{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: auto;
+  text-align: left;
+  padding: 5px 20px 15px 20px;
+
+}
+
+.card-icons{
+  text-align: center;
+}
+
+.form-side i{
+  padding: 0 4px;
+  margin-bottom: 10px;
+}
+
+.form-side input{
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.large-title{
+  font-size: 30px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.basket-total{
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.checkout-btn {
+    width: auto;
+    margin: auto;
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 10%;
+    margin-top: 10px;
 }
