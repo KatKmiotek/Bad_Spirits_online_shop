@@ -17,9 +17,27 @@ li.component-item {
   display: inline;
 }
 
+.nav-bar{
+  width: 100vw;
+  background-color: white;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+}
+
 .navLink {
     display: inline;
     color: black;
+    font-family: 'Kreon';
+    font-size: 20px;
+}
+
+.navLink:hover{
+  background-color: #a6a6a6;
+}
+
+.footerpage{
+  padding: 0;
 }
 
 body {
@@ -29,7 +47,6 @@ body {
 }
 #root {
   margin-top: 80px;
-  padding: 30px;
 }
 .imgCart {
       height: 100px;
@@ -68,10 +85,7 @@ a {
 i{
   padding: 20px;
 }
-.singlePirate {
-  display: flex;
-  justify-content: center;
-}
+
 table{
   text-align: center;
 }
