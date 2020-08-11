@@ -12,13 +12,15 @@ const ProductDetail = ({product, addToCart}) => {
 
   return (
     <div className="">
-      <img src={product.image} alt={product.name} height="200"/>
+      <div>
+        <img className="detailImage" src={product.image} alt={product.name} height="200"/>
+      </div>
       <h3>{product.name}</h3>
       <p>ABV: {product.percent}%</p>
       <p>{product.description}</p>
       <p>{product.location}</p>
       <p>£{product.price}</p>
-      <button className="button" onClick={handlePassToList}>Add to Card</button>
+      <button onClick={handlePassToList}>Add to Card</button>
     </div>
   )
 }

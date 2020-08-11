@@ -1,8 +1,33 @@
 .component {
-  margin: 20px;
-  padding: 10px;
+  margin: 25px;
   width: 300px;
+  transition: all 0.3s;
+  padding: 10px;
+
 }
+
+/* img.image-hover:hover{
+  filter: brightness(50%);
+} */
+
+img.image-hover {
+  padding: 5px;
+  /* border: solid 5px;
+  border-color: #669999; */
+  transition: transform .2s;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+img.image-hover:hover {
+  transform: scale(1.1);
+}
+
+button:hover{
+   filter: brightness(90%); 
+}
+
 
 .name {
   color: darkSlateGray;
@@ -20,6 +45,7 @@ li.component-item {
 .navLink {
     display: inline;
     color: black;
+    align-self: center;
 }
 
 body {
@@ -88,4 +114,8 @@ table{
   border-right: 1px solid #333333;
   border-bottom: 1px solid #333333;
   border-left: 1px solid #CCCCCC;
+}
+
+.detailImage{
+  alig
 }
