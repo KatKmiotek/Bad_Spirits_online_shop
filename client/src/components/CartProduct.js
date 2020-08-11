@@ -10,9 +10,12 @@ const CartProduct = ({ product, removeFromCart}) => {
 
   return(
     <Fragment>
-    <p>{product.name}</p>
-    <p>{product.price}</p>
-    <button onClick={handlePassToShoppingCart}>Remove</button>
+    <table className="table is-fullwidth">
+    <td><img src={product.image} className="imgCart" alt={product.name}/></td>
+    <td>{product.name}</td>
+    <td>£{product.price}</td>
+    <i className="fas fa-trash" onClick={handlePassToShoppingCart}></i>
+    </table>
     </Fragment>
   )
 }

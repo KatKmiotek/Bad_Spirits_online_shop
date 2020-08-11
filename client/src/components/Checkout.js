@@ -47,13 +47,10 @@ render(){
     <input required type="number" placeholder="Age" name="age" onChange={this.handleChange} value={this.state.order.age}/>
     <button type="submit">Place Order </button>
     </form>
-<<<<<<< HEAD
-    <p>Total: £ {this.props.cartTotal}</p>
-    </Elements>
-    <p></p>
-=======
 
->>>>>>> develop
+    <p>Total: £ {this.props.cartTotal}</p>
+    
+
     </div>
   )
 }

@@ -14,16 +14,10 @@ const ShoppingCart = (props)=> {
   });
 
 
-const basketTotal = props.basket.reduce((total, product)=>{
-  return total + product.price
-}, 0);
-
 
 function handleRemove(product){
   props.removeFromCart(product);
 }
-
-
 
 
 
@@ -36,9 +30,11 @@ function handleRemove(product){
 
       {basketNodes}
 
-    <h4>Total: £{basketTotal.toFixed(2)}</h4>
+    <h4><strong>Total: £{props.cartTotal}</strong></h4>
+
+
     <Link to='/checkout'>
-    <button>Check Out</button>
+    <button className="button">Check Out</button>
     </Link>
     </div>
 

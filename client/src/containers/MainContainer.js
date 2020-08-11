@@ -8,18 +8,13 @@ import ProductDetail from '../components/ProductDetail.js';
 import ShoppingCart from '../components/ShoppingCart.js';
 import SearchBar from '../components/SearchBar.js';
 import Checkout from "../components/Checkout.js";
-<<<<<<< HEAD
 import AfterPurchase from '../components/AfterPurchase.js';
-=======
-<<<<<<< HEAD
 import Footer from '../Footer.js'
 import Delivery from '../Delivery.js'
 import About from '../About.js'
 import Contact from '../Contact.js'
-=======
 import Confirmation from "../components/Confirmation.js";
->>>>>>> develop
->>>>>>> develop
+
 
 class MainContainer extends Component {
   constructor(props) {
@@ -75,11 +70,7 @@ class MainContainer extends Component {
         window.location = '/confirmation'
       })
     }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> develop
 
   }
 
@@ -94,7 +85,7 @@ class MainContainer extends Component {
       <Router >
       <Fragment>
       <NavBar shoppingCart={this.state.cart}/>
-      <Switch>
+      <Switch >
       <Route path='/home' render={()=> {
           return <Home products={this.state.products}/>;
         }}/>
@@ -123,7 +114,7 @@ class MainContainer extends Component {
         return <ProductList products={this.state.products} addToCart={this.handleAddToCart}/>;
       }}/>
       <Route path="/shoppingCart" render={()=> {
-        return <ShoppingCart basket={this.state.cart} removeFromCart={this.handleRemove}/>;
+        return <ShoppingCart basket={this.state.cart} removeFromCart={this.handleRemove} cartTotal={basketTotal.toFixed(2)}/>;
       }}/>
       <Route path="/search" render={()=> {
         return <SearchBar products={this.state.products} addToCart={this.handleAddToCart}/>;

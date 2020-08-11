@@ -18,7 +18,7 @@ const ProductDetail = ({product, addToCart}) => {
       <p>{product.description}</p>
       <p>{product.location}</p>
       <p>£{product.price}</p>
-      <button onClick={handlePassToList}>Add to Card</button>
+      <button className="button" onClick={handlePassToList}>Add to Card</button>
     </div>
   )
 }

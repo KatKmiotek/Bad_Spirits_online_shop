@@ -16,8 +16,8 @@ const Footer = (props)=> {
     </Link>
     <i className="fa fa-facebook-official" aria-hidden="true"></i>
     <i className="fa fa-instagram" aria-hidden="true"></i>
-    <a href="https://github.com/KatKmiotek/group_project/tree/master">
-    <i className="fa fa-github" aria-hidden="true"></i>
+    <a href="https://github.com/KatKmiotek/group_project/tree/master"target="_blank" rel="noopener noreferrer">
+    <i className="fa fa-github navLink" aria-hidden="true"></i>
     </a>
     </div>
     </footer>

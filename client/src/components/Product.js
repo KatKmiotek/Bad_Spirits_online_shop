@@ -22,7 +22,9 @@ const Product = ({ product, addToCart }) => {
       <p>{product.name}</p>
       <p>£{product.price}</p>
       <p>ABV: {product.percent}%</p>
-      <button onClick={handlePassToList}>Add to Card</button>
+      <button style={{display: product.stock > 0 ? 'inline-block' : 'none' }} className="button" onClick={handlePassToList}>Add to Cart</button>
+      <button style={{display: product.stock === 0 ? 'inline-block' : 'none' }} className="button" >Sold Out</button>
+
     </Fragment>
   );
 };

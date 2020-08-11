@@ -19,6 +19,7 @@ li.component-item {
 
 .navLink {
     display: inline;
+    color: black;
 }
 
 body {
@@ -30,6 +31,10 @@ body {
   margin-top: 80px;
   padding: 30px;
 }
+.imgCart {
+      height: 100px;
+      width: 100px;
+ }
 
 .main-image{
   width:100%;
@@ -45,6 +50,7 @@ header {
      display: flex;
      align-items: center;
 }
+
 header * {
     display: inline;
 }
@@ -66,7 +72,12 @@ i{
   display: flex;
   justify-content: center;
 }
-
+table{
+  text-align: center;
+}
+.button{
+  padding: 50px;
+}
 .button-link {
   font: bold 11px Arial;
   text-decoration: none;
