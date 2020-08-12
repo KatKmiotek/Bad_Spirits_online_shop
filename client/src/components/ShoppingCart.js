@@ -11,14 +11,18 @@ const ShoppingCart = (props)=> {
           <CartProduct product={product} removeFromCart={handleRemove}/>
         </div>
     );
-  });
+  })
+
 
 
 
 function handleRemove(product){
   props.removeFromCart(product);
 }
-
+function removeAll(props){
+  props.basket = [];
+  window.location ='/shoppingCart'
+}
 
 
   return (
@@ -36,6 +40,7 @@ function handleRemove(product){
     <Link to='/checkout'>
     <button className="button" style={{ display: props.basket.length ===0? 'none': 'inline-block'}}>Check Out</button>
     </Link>
+      <button className="button" style={{ display: props.basket.length ===0? 'none': 'inline-block'}} onClick={removeAll}>Clear Basket</button>
     </div>
 
     <div className="column is-one-quarter"></div>

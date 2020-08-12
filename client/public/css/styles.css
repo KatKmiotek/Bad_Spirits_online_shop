@@ -69,7 +69,7 @@ body {
   background-color: white;
 }
 #root {
-  margin-top: 80px;
+  margin-top: 180px;
 }
 .imgCart {
       height: 100px;
@@ -143,6 +143,7 @@ footer{
   position: fixed;
   bottom: 0
 }
-.input{
-  margin-top: 50px;
+
+.basket{
+  margin-top: 70px;
 }

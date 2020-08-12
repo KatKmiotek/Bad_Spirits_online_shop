@@ -29,9 +29,10 @@ handleChange(e) {
         const filter = e.target.value.toLowerCase();
         const searchedName = product.name.toLowerCase();
         const searchedCategory = product.category.toLowerCase();
-        return searchedName.includes(filter)
-        // searchedCategory.includes(filter);
-      });
+        if(searchedName.includes(filter) || searchedCategory.includes(filter)){
+          return product
+        }
+      })
     } else {
       newList = this.props.products;
     }

@@ -84,6 +84,22 @@ public class DataLoader implements ApplicationRunner {
         Product beer5 = new Product("Peroni Nastro Azzurro", 330, 10 , 2.60, "Peroni is one of the worlds most popular premium Italian lagers, crisp, refreshing and with a touch of Italian style.",
                 "Italy", 5.3, "Lager", ProductTypes.BEER, "http://localhost:8080/api/images/peroni.jpg");
         productRepository.save(beer5);
+        Product beer6 = new Product("Damm Lemon Beer", 330, 10, 1.20, "Damm Lemon beer is a refreshing, light drink, perfect for all occasions with its invigorating citrus filled taste. Made from the finest Mediterranean lemons in Barcelona, this delicious lemon beer is the ultimate summer's day BBQ cool down.",
+                "Spain", 3.2, "Lager", ProductTypes.BEER, "http://localhost:8080/api/images/lemon-damm-bottle.png");
+        productRepository.save(beer6);
+        Product beer7 = new Product("Big Drop Paradiso", 330, 10, 1.50, "This IPA radiates citrus fruit from the moment you pour it to the second you finish that last sip with a satisfied sigh. The bright, sharp twist of bitterness on the end makes you want to dive back in for one more.",
+                "England", 0.5, "Lager", ProductTypes.BEER, "http://localhost:8080/api/images/citra_-_bottle.jpg");
+        productRepository.save(beer7);
+        Product beer8 = new Product("Thornbridge Brewery - Jaipur IPA", 330, 10, 1.80, "With over 100 worldwide awards, this American style IPA has a complexity of flavours created by a six-dimensional hop experience. ",
+                "England", 5.9, "Pale Ale", ProductTypes.BEER, "http://localhost:8080/api/images/jaipur.jpg");
+        productRepository.save(beer8);
+        Product beer9 = new Product("Mahou", 330, 10, 1.60, "Made with the best varieties of hops and yeast, it is known for its golden color and its characteristic mild flavor. The result: a perfectly balanced taste that lingers on the palate.",
+                "Spain", 5.1, "Lager", ProductTypes.BEER, "http://localhost:8080/api/images/mahou330ml.jpg");
+        productRepository.save(beer9);
+        Product beer10 = new Product("Big Drop Sour", 330, 10, 1.50, "Big Drop’s Sour is Vegan-friendly with a new recipe that combines a stronger citrus aroma whilst delivering a sharper, more acetic twang. The palate is filled with sherbety refreshing goodness and sees subtle farmyard grain flavours coming through.",
+                "England", 0.5, "Lager", ProductTypes.BEER, "http://localhost:8080/api/images/sour_-_bottle.jpg");
+        productRepository.save(beer10);
+
 
         Product rum1 = new Product("Flor de Cana 7yr", 700, 10, 25.00,
                 "Another gem from the Flor de Cana stable. The 7yr has hints of almond and vanilla, with a mild spiceyness", "Nicaraguan", 40.00, "gold", ProductTypes.RUM, "http://localhost:8080/api/images/flor_de_cana_7yr.jpg");
