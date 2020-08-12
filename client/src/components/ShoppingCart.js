@@ -31,7 +31,8 @@ function removeAll(props){
     <div className='columns'>
     <div className="column is-one-quarter"></div>
     <div className="column is-two-quarter">
-    <h2 className="large-title">My Basket</h2>
+    <h2 className="large-title pad-btm">My Basket</h2>
+
       {basketNodes}
 
     <h4><strong>Total: £{props.cartTotal}</strong></h4>

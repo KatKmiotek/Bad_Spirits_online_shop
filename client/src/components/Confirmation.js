@@ -12,10 +12,13 @@ const { width, height } = useWindowSize();
       width={width}
       height={height}
     />
-      <h2>Thanks for your purchase!</h2>
-      <p>Please check your email to track shipping</p>
-      
+
+    <div className="pad-top">
+      <h1 className="title">Thanks for your purchase!</h1>
+      <p className="pad-top-btm">Please check your email to track shipping</p>
+
       <Link to="/home"><button className="button">Back to Home</button></Link>
+    </div>
     </Fragment>
   )
 }
