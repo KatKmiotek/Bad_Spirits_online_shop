@@ -22,7 +22,9 @@ const ProductDetail = ({product, addToCart}) => {
       <p class="subtitle">{product.name}</p>
       <div class="content">
         <p>{product.description} From {product.location}</p>
-        <p>abv: {product.percent}%</p>
+        <p>ABV: {product.percent}%</p>
+        <p>Size: {product.measurement} ml</p>
+        <p>Origin: {product.location} </p>
         <p>price: £{product.price.toFixed(2)}</p>
         <p style={{display: product.stock > 0 ? 'inline-block': 'none'}}>{product.stock} items available in stock</p>
         <p style={{display: product.stock === 0 ? 'inline-block': 'none'}}>Sorry, item is temporarily Out of Stock</p>

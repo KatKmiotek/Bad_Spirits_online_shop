@@ -84,7 +84,7 @@ public class DataLoader implements ApplicationRunner {
         Product beer5 = new Product("Peroni Nastro Azzurro", 330, 10 , 2.60, "Peroni is one of the worlds most popular premium Italian lagers, crisp, refreshing and with a touch of Italian style.",
                 "Italy", 5.3, "Lager", ProductTypes.BEER, "http://localhost:8080/api/images/peroni.jpg");
         productRepository.save(beer5);
-
+        
         Product rum1 = new Product("Flor de Cana 7yr", 700, 10, 25.00,
                 "Another gem from the Flor de Cana stable. The 7yr has hints of almond and vanilla, with a mild spiceyness", "Nicaraguan", 40.00, "gold", ProductTypes.RUM, "http://localhost:8080/api/images/flor_de_cana_7yr.jpg");
         productRepository.save(rum1);
