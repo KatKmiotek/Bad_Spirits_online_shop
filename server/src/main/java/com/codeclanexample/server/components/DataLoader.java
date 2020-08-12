@@ -118,7 +118,23 @@ public class DataLoader implements ApplicationRunner {
                 "Panama", 40.00, "dark", ProductTypes.RUM, "http://localhost:8080/api/images/ron_abuelo_7_years.jpg");
         productRepository.save(rum4);
 
-        Product rum5 = new Product();
+        Product rum5 = new Product("Pirate's Grog Spiced", 700, 10, 32.50, "Pirate's Grog Spiced is an exotic infusion of salt, caramel, a touch of allspice and a secret ingredient, which can be found growing along the enchanting shores of Roatan, Honduras.", "England", 37.5, "Spiced", ProductTypes.RUM, "http://localhost:8080/api/images/styles.jpg");
+        productRepository.save(rum5);
+
+        Product rum6 = new Product("Wester White Rum", 500, 10 , 26.00, "Fully fermented and distilled from sugarcane molasses at Wester Distillery. This white rum is perfect for serving in a cocktail or with your mixer of choice.", "Glasgow", 40.00, "White", ProductTypes.RUM, "http://localhost:8080/api/images/wester.jpg" );
+        productRepository.save(rum6);
+
+        Product rum7 = new Product("Havana Club 3yrs", 700, 0, 20.95, "3-year-old rum has a light straw colour. It has at once the luminous, light, syrupy look characteristic of aged rum. This Cuban rum has a sweet, woody smell with aromas of caramel and vanilla.", "Cuba", 40.00, "White", ProductTypes.RUM, "http://localhost:8080/api/images/havana.jpg");
+        productRepository.save(rum7);
+
+        Product rum8 = new Product("Don Papa - 7yrs" ,700, 0, 33.54, "Distilled from some of the finest sugar cane in the world, Don Papa is first aged 7 years in oak barrels in the foothills of Mount Kanlaon before being blended to perfection.", "Philipines", 40.00, "Gold", ProductTypes.RUM, "http://localhost:8080/api/images/don_papa.jpg");
+        productRepository.save(rum8);
+
+        Product rum9 = new Product("Rumbullion", 700, 5, 32.05, "A shipshape spiced concoction made using a blend of fantastic Caribbean rum, creamy Madagascan vanilla, vibrant orange peel, clove, cinnamon and a pinch of cardamom.", "England", 42.6, "Spiced", ProductTypes.RUM, "http://localhost:8080/api/images/rumbullion.jpg");
+        productRepository.save(rum9);
+
+        Product rum10 = new Product("Bumbu", 700, 10, 35.53, "Bumbu Rum is based on the original recipe created by 16th and 17th century sailors of the West Indies, who blended native Caribbean ingredients into their rum and called it “Bumbu” - truly the original craft spirit.", "Panama", 35.00, "Gold", ProductTypes.RUM, "http://localhost:8080/api/images/bumbu.jpg");
+        productRepository.save(rum10);
 
 
 
