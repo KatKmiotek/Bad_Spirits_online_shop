@@ -48,10 +48,14 @@ handleSubmit(event){
 render(){
   return (
 
-    <div>
+    <div className=''>
+    <div className=''></div>
 
-    <form name="checkout" onSubmit={this.handleSubmit}>
-    <h3>Billing Details</h3>
+    <div className=''>
+
+    <form className="checkout-form" name="checkout" onSubmit={this.handleSubmit}>
+    <div className="form-side">
+    <h2 className="large-title">Billing Details</h2>
     <label for="name"><i className="fa fa-user"></i> Full Name</label>
     <input required id="name" type="text" placeholder="Full Name" name="name" onChange={this.handleChange} value={this.state.order.name}/>
     <label for="email"><i className="fa fa-envelope"></i> Email</label>
@@ -60,27 +64,33 @@ render(){
     <input required type="text" id="address" placeholder="Address" name="address" onChange={this.handleChange} value={this.state.order.address}/>
     <label for="city"><i className="fa fa-institution"></i> City</label>
     <input type="text" id="city" name="city" placeholder="Glasgow" value={this.state.order.city} onChange={this.handleChange}/>
+    </div>
 
-
-    <h3>Payment Details</h3>
-    <label for="fname">Accepted Cards</label>
-      <i class="fa fa-cc-visa"></i>
-      <i class="fa fa-cc-amex" ></i>
-      <i class="fa fa-cc-mastercard"></i>
+    <div className="form-side">
+    <h2 className="large-title">Payment Details</h2>
+    <div className='card-icons'>
+      <i class="fa fa-cc-visa fa-2x"></i>
+      <i class="fa fa-cc-amex fa-2x" ></i>
+      <i class="fa fa-cc-mastercard fa-2x"></i>
+    </div>
     <label for="cardname">Name on Card</label>
     <input type="text" id="cardname" name="cardname" placeholder="MR D DRAPER"/>
     <label for="cardnum">Credit card number</label>
     <input type="text" id="cardnum" name="cardnumber" placeholder="1111-2222-3333-4444"/>
     <label for="expiry">Expiry</label>
     <input type="text" id="expiry" name="expiry" placeholder="MM/YY"/>
+    </div>
 
 
-    <p>Total: £ {this.props.cartTotal}</p>
+    <p className="basket-total">Total: £ {this.props.cartTotal}</p>
 
-    <button type="submit">Place Order </button>
+    <button className="checkout-btn" type="submit">Place Order </button>
 
     </form>
 
+    </div>
+
+    <div className=''></div>
     </div>
   )
 }
