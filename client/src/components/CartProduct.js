@@ -13,7 +13,7 @@ const CartProduct = ({ product, removeFromCart}) => {
     <table className="table is-fullwidth">
     <td><img src={product.image} className="imgCart" alt={product.name}/></td>
     <td>{product.name}</td>
-    <td>£{product.price}</td>
+    <td>£{product.price.toFixed(2)}</td>
     <i className="fas fa-trash" onClick={handlePassToShoppingCart}></i>
     </table>
     </Fragment>

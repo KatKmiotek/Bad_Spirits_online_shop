@@ -138,7 +138,7 @@ public class DataLoader implements ApplicationRunner {
 
 
 
-        Product gin1 = new Product("Audemus Pink Pepper", 700, 10, 45.00, "A wonderfully balanced spirit, the brand new Audemus Pink Pepper Gin reveals a blend of pink peppercorn, cardamom, juniper, vanilla, tonka and honey.", "France", 44.00, "Regular", ProductTypes.GIN, "http://localhost:8080/api/images/pink_pep.jpg");
+        Product gin1 = new Product("Audemus Pink Pepper", 700, 1, 45.00, "A wonderfully balanced spirit, the brand new Audemus Pink Pepper Gin reveals a blend of pink peppercorn, cardamom, juniper, vanilla, tonka and honey.", "France", 44.00, "Regular", ProductTypes.GIN, "http://localhost:8080/api/images/pink_pep.jpg");
 
         productRepository.save(gin1);
 
