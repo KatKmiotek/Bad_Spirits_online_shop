@@ -157,7 +157,7 @@ public class DataLoader implements ApplicationRunner {
         Product gin6 = new Product("O'ndina Gin", 700, 5, 32.00, "Inspired by the effortless glamour and carefree spirit of the Italian Riviera in the 1960s, O’ndina is a super-premium Italian gem that embodies the spirit of La Dolce Vita.", "Italy", 45, "Regular", ProductTypes.GIN, "http://localhost:8080/api/images/o_ndina_gin.jpg");
         productRepository.save(gin6);
 
-        Product gin7 = new Product("Cotswolds Ginger Gin", 500, 8, 38.95, "Cotswolds Ginger Gin is a warming and spicy barrel-aged gin combining Cotswolds Dry Gin, American oak barrels, candied ginger and fresh orange peel to create a spirited gin with exceptional depth of flavour.", "England", 46, "Flavoured", ProductTypes.GIN, "http://localhost:8080/api/images/cotswold_ginger.png");
+        Product gin7 = new Product("Cotswolds Ginger Gin", 500, 8, 38.95, "Cotswolds Ginger Gin is a warming and spicy barrel-aged gin combining Cotswolds Dry Gin, American oak barrels, candied ginger and fresh orange peel to create a spirited gin with exceptional depth of flavour.", "England", 46, "Flavoured", ProductTypes.GIN, "http://localhost:8080/api/images/costwold_ginger.png");
         productRepository.save(gin7);
 
         Product gin8 = new Product("Deaths Door Gin", 700, 4, 28.50, "Deaths Door Gin comes from Washington Island in Wisconsin and is made with organic red winter wheat. It has been bottled at a higher than usual strength, so use a bit less or add more tonic.", "USA", 47, "Regualar", ProductTypes.GIN, "http://localhost:8080/api/images/gin_dea1.jpg");
