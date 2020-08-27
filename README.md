@@ -5,16 +5,17 @@ This web app was built using React & Spring which pulls a list of products from 
 
 ### Setup
 ##### Client
-```cd client
-npm install
-npm run start```
+
+    cd client
+    npm install
+    npm run start
 
 This should open a browser windown, if not go to http://localhost:3000
 
 ##### Server
-`cd server`
-`idea .` to open folder in Intelli J
-Run ServerApplication
+    cd server
+    idea .
+Run ServerApplication in Intelli J
 
 Now refresh localhost:3000 and products will be displayed.
 
