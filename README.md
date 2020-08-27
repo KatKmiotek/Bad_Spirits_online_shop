@@ -34,4 +34,7 @@ Kat Kmiotek
 Stuart Meldrum
 
 
+<img src="git_images/allproducts.png" height=400px >
+<img src="git_images/cheackout.png" height=400px >
+<img src="git_images/complete.png" height=400px >
 
