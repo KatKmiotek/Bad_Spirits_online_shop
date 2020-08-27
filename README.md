@@ -20,12 +20,12 @@ Run ServerApplication in Intelli J
 Now refresh localhost:3000 and products will be displayed.
 
 http://localhost:8080/api can be used to fetch API requests using the following routes:
-/products  -  to view all products
-/products/:id. -  to view one product
-/products/find/:category. -  to view all products of certain category (e.g beer, wine)
+* /products  -  to view all products
+* /products/:id. -  to view one product
+* /products/find/:category. -  to view all products of certain category (e.g beer, wine)
 
-/orders  -  to view all orders
-/orders/:id. -  to view one order
+* /orders  -  to view all orders
+* /orders/:id. -  to view one order
 
 
 #### Authors
