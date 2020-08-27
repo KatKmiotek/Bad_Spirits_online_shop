@@ -5,9 +5,9 @@ This web app was built using React & Spring which pulls a list of products from 
 
 ### Setup
 ##### Client
-`cd client`
-`npm install`
-`npm run start`
+```cd client
+npm install
+npm run start```
 
 This should open a browser windown, if not go to http://localhost:3000
 
