@@ -69,7 +69,7 @@ public class DataLoader implements ApplicationRunner {
         productRepository.save(wine12);
 
 
-        Product beer1 = new Product("Big Drop Pine Trail Pale Ale", 330, 10, 2.50, "This dry-hopped pale ale is deliciously refreshing. The nose has hints of pine and honey. Packed full of flavour from citrus-heavy hops with a twist of fresh lime to create a crisp, zesty beer.",
+        Product beer1 = new Product("Big Drop Pine Trail Pale Ale", 330, 1, 2.50, "This dry-hopped pale ale is deliciously refreshing. The nose has hints of pine and honey. Packed full of flavour from citrus-heavy hops with a twist of fresh lime to create a crisp, zesty beer.",
                 "England", 0.5, "Pale Ale", ProductTypes.BEER, "http://localhost:8080/api/images/pale_ale.jpg" );
         productRepository.save(beer1);
         Product beer2 = new Product("Bradfield Brewery - Farmers Blonde", 500, 10, 3.00, "This award-winning, very pale brilliant blonde beer has citrus and summer fruit aromas making it an extremely refreshing ale.",
