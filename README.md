@@ -4,14 +4,14 @@
 This web app was built using React & Spring which pulls a list of products from an external API. The user can then view all products, filter products and add products to their shopping cart. Once the user completes the checkout process, a new order is placed in the database & stock levels are updated in the product databse. 
 
 ### Setup
-#####Client
+##### Client
 `cd client`
 `npm install`
 `npm run start`
 
 This should open a browser windown, if not go to http://localhost:3000
 
-#####Server
+##### Server
 `cd server`
 `idea .` to open folder in Intelli J
 Run ServerApplication
